@@ -29,7 +29,7 @@ add_library(ShapeLib STATIC ${SOURCES} ${HEADERS})
 
 target_compile_definitions(ShapeLib PRIVATE BUILDING_CLIENT_DLL)
 
-
+#kamill
 #enable_testing()
 
 #set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
