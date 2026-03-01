@@ -2,3 +2,5 @@
 
 This is a training repository for a second-year student project in Software Engineering.
 
+Robie zmianę
+
