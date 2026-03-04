@@ -5,6 +5,7 @@
 #include "Shape3D.h"
 #include "ShapeResultData.h"
 #include <string>
+#include <cmath>
 using namespace std;
 #include "ShapeParam.h"
 
@@ -20,12 +21,19 @@ class Sphere : public Shape3D<T> {
 };
 template<class T>
 inline ShapeResultData<T> Sphere<T>::compute() {
-  return ShapeResultData<T>();
+   
+    T r = this->param.get(0);
+
+    T volume = (4.0 / 3.0) * M_PI * r * r * r;
+
+    T surface = 4 * M_PI * r * r;
+
+  return ShapeResultData<T>(surface, volume);
 }
 
 template<class T>
 inline string Sphere<T>::print() {
-  return "";
+  return "Sphere";
 }
 
 template<class T>
