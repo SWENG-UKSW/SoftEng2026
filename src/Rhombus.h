@@ -7,6 +7,8 @@
 #include <string>
 using namespace std;
 #include "ShapeParam.h"
+#include "ShapeParamIndex.h"
+#include "ShapeResultIndex.h"
 
 template<class T>
 class Rhombus : public Shape2D<T> {
@@ -20,13 +22,22 @@ class Rhombus : public Shape2D<T> {
 };
 template<class T>
 inline ShapeResultData<T> Rhombus<T>::compute() {
-  return ShapeResultData<T>();
+    T d1 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL);
+    T d2 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL_2);
+
+    ShapeResultData<T> res;
+    res.set(ShapeResultIndex::RESULT_AREA, (d1 * d2) / 2);
+    return res;
 }
 
 template<class T>
 inline string Rhombus<T>::print() {
-  return "";
+    T d1 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL);
+    T d2 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL_2);
+
+    return "Rhombus(" + to_string(d1) + "," + to_string(d2) + ")";
 }
+
 
 template<class T>
 inline Rhombus<T>::Rhombus(const ShapeParam<T> & param) : Shape2D<T>(param) {
