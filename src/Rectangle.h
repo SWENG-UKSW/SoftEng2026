@@ -20,13 +20,25 @@ class Rectangle : public Shape2D<T> {
 };
 template<class T>
 inline ShapeResultData<T> Rectangle<T>::compute() {
-  return ShapeResultData<T>();
+
+    T a = this->param.getA();
+    T b = this->param.getB();
+
+    T area = a * b;
+    T perimeter = 2 * (a + b);
+
+    return ShapeResultData<T>(area, perimeter);
 }
 
 template<class T>
 inline string Rectangle<T>::print() {
-  return "";
+
+    T a = this->param.getA();
+    T b = this->param.getB();
+
+    return "Rectangle a=" + to_string(a) + " b=" + to_string(b);
 }
+
 
 template<class T>
 inline Rectangle<T>::Rectangle(const ShapeParam<T> & param) : Shape2D<T>(param) {
