@@ -2,34 +2,37 @@
 #define _TRIANGLE_H
 
 
-#include "Shape2D.h"
-#include "ShapeResultData.h"
-#include <string>
-using namespace std;
-#include "ShapeParam.h"
+#include "AbstractShape.h"
+#include "IShape2D.h"
 
+#include <iostream>
 template<class T>
-class Triangle : public Shape2D<T> {
+class Triangle : public AbstractShape<T>, public IShape2D<T> {
   public:
-    inline virtual ShapeResultData<T> compute();
+    inline void print();
 
-    inline string print();
+    inline void compute();
 
-    inline Triangle(const ShapeParam<T> & param);
+    inline T getArea();
+
+    inline T getPerimeter();
 
 };
 template<class T>
-inline ShapeResultData<T> Triangle<T>::compute() {
-  return ShapeResultData<T>();
+inline void Triangle<T>::print() 
+  {std::cout << "Trojkat z BOUML" << std::endl;}
+
+template<class T>
+inline void Triangle<T>::compute() 
+ {this->calculatedValue = 100;}
+
+template<class T>
+inline T Triangle<T>::getArea() {
 }
 
 template<class T>
-inline string Triangle<T>::print() {
-  return "";
-}
-
-template<class T>
-inline Triangle<T>::Triangle(const ShapeParam<T> & param) : Shape2D<T>(param) {
+inline T Triangle<T>::getPerimeter() {
+  return 0;
 }
 
 #endif
