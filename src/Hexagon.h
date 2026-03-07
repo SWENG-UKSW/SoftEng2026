@@ -1,6 +1,6 @@
 #ifndef _HEXAGON_H
 #define _HEXAGON_H
-
+#include <cmath>
 
 #include "Shape2D.h"
 #include "ShapeResultData.h"
@@ -20,12 +20,21 @@ class Hexagon : public Shape2D<T> {
 };
 template<class T>
 inline ShapeResultData<T> Hexagon<T>::compute() {
-  return ShapeResultData<T>();
+
+  T side = this->param.getParam1();
+
+  T area = (3 * sqrt(3) / 2) * side * side;
+  T perimeter = 6 * side;
+
+  return ShapeResultData<T>(area, perimeter);
 }
 
 template<class T>
 inline string Hexagon<T>::print() {
-  return "";
+
+  T side = this->param.getParam1();
+
+  return "Hexagon side=" + to_string(side);
 }
 
 template<class T>
