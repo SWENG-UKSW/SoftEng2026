@@ -20,12 +20,30 @@ class Trapeze : public Shape2D<T> {
 };
 template<class T>
 inline ShapeResultData<T> Trapeze<T>::compute() {
-  return ShapeResultData<T>();
+
+    ShapeResultData<T> result;
+
+    T a = this->param.get(PARAM_WIDTH);
+    T b = this->param.get(PARAM_DEPTH);
+    T h = this->param.get(PARAM_HEIGHT);
+
+    T area = (a + b) * h / 2;
+
+    result.set(RESULT_AREA, area);
+
+    return result;
 }
 
 template<class T>
 inline string Trapeze<T>::print() {
-  return "";
+
+    T a = this->param.get(PARAM_WIDTH);
+    T b = this->param.get(PARAM_DEPTH);
+    T h = this->param.get(PARAM_HEIGHT);
+
+    return "Trapeze(width=" + to_string(a) +
+           ", depth=" + to_string(b) +
+           ", height=" + to_string(h) + ")";
 }
 
 template<class T>
