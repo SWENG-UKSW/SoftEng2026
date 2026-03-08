@@ -1,22 +1,22 @@
 name: CI # Workflow name
 on: # Trigger events
- push: 
- branches: 
-   - main # On pushes to main
- pull_request: 
- branches: 
-   - main # On pull requests to main
-jobs: 
- build: # Job name
- runs-on: ${{ matrix.os }} # Operating system from matrix
- strategy: 
- matrix: 
- os: [ubuntu-latest, windows-latest] # Test on Ubuntu and Windows
- steps: 
-   - name: Checkout # Check out the code
- uses: actions/checkout@v3
-   - name: Set up CMake # Configure CMake
- uses: jwlawson/actions-setup-cmake@v1
- with:
- cmake-version: '3.20.0' # CMake version
-...
+  push:
+    branches:
+      - main # On pushes to main
+  pull_request:
+    branches:
+      - main # On pull requests to main
+jobs:
+  build: # Job name
+    runs-on: ${{ matrix.os }} # Operating system from matrix
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest] # Dodano macOS
+    steps:
+      - name: Checkout # Check out the code
+        uses: actions/checkout@v3
+      - name: Set up CMake # Configure CMake
+        uses: jwlawson/actions-setup-cmake@v1
+        with:
+          cmake-version: '3.20.0' # CMake version
+
