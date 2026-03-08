@@ -37,8 +37,9 @@ inline string Ellipse<T>::print() {
 	return "Ellipse(" + to_string(w) + ", " + to_string(h) + ")";
 }
 
-template<class T>
-inline Ellipse<T>::Ellipse(const ShapeParam<T>& param) : Shape2D<T>(param) {
-}
+template <class T>
+inline Ellipse<T>::Ellipse(const ShapeParam<T>& param): Shape2D<T>(param)
+{}
+
 #endif
 
