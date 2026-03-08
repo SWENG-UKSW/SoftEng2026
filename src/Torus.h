@@ -19,9 +19,9 @@ class Torus : public Shape3D<T> {
 
 };
 template<class T>
-inline ShapeResultData<T> Torus<T>::compute() {
+inline ShapeResult<T> Torus<T>::compute() {
 
-    ShapeResultData<T> result;
+    ShapeResult<T> result;
 
     const T PI = 3.141592653589793;
 
