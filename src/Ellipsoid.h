@@ -14,6 +14,7 @@ template<class T>
 class Ellipsoid : public Shape3D<T> {
 public:
     inline virtual ShapeResultData<T> compute();
+
     inline string print();
     inline Ellipsoid(const ShapeParam<T>& param);
 };
