@@ -13,7 +13,7 @@ using namespace std;
 template<class T>
 class Rhombus : public Shape2D<T> {
   public:
-    inline ShapeResultData<T> compute();
+    inline ShapeResult<T> compute();
 
     inline string print();
 
@@ -21,19 +21,19 @@ class Rhombus : public Shape2D<T> {
 
 };
 template<class T>
-inline ShapeResultData<T> Rhombus<T>::compute() {
-    T d1 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL);
-    T d2 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL_2);
+inline ShapeResult<T> Rhombus<T>::compute() {
+    T d1 = this->m_param.get_attrib(ShapeParamIndex::PARAM_DIAGONAL);
+    T d2 = this->m_param.get_attrib(ShapeParamIndex::PARAM_DIAGONAL_2);
 
-    ShapeResultData<T> res;
-    res.set(ShapeResultIndex::RESULT_AREA, (d1 * d2) / 2);
-    return res;
+    ShapeResult<T> res;
+    res.set_attrib(ShapeResultIndex::RESULT_AREA, (d1 * d2) / 2);
+    return ShapeResult<T>();
 }
 
 template<class T>
 inline string Rhombus<T>::print() {
-    T d1 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL);
-    T d2 = this->m_param.get(ShapeParamIndex::PARAM_DIAGONAL_2);
+    T d1 = this->m_param.get_attrib(ShapeParamIndex::PARAM_DIAGONAL);
+    T d2 = this->m_param.get_attrib(ShapeParamIndex::PARAM_DIAGONAL_2);
 
     return "Rhombus(" + to_string(d1) + "," + to_string(d2) + ")";
 }
