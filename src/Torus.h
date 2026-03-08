@@ -19,26 +19,27 @@ class Torus : public Shape3D<T> {
 
 };
 template<class T>
-inline ShapeResult<T> Torus<T>::compute() {
-  ShapeResultData<T> result;
+inline ShapeResultData<T> Torus<T>::compute() {
 
-const T PI = 3.141592653589793;
+    ShapeResultData<T> result;
 
-T R = this->m_param.get(PARAM_RADIUS);
-T r = this->m_param.get(PARAM_WIDTH);
+    const T PI = 3.141592653589793;
 
-T surface = 4 * PI * PI * R * r;
-T volume = 2 * PI * PI * R * r * r;
+    T R = this->m_param.get(PARAM_RADIUS);
+    T r = this->m_param.get(PARAM_WIDTH);
 
-result.set(RESULT_SURFACE, surface);
-result.set(RESULT_VOLUME, volume);
+    T surface = 4 * PI * PI * R * r;
+    T volume = 2 * PI * PI * R * r * r;
 
-return result;}
+    result.set(RESULT_SURFACE, surface);
+    result.set(RESULT_VOLUME, volume);
+
+    return result;
+}
 
 template<class T>
-inline string Torus<T>::print()
-  return "";
-}
+std::string Torus<T>::print() {
+    return "";}
 
 template<class T>
 inline Torus<T>::Torus(const ShapeParam<T> & param) : Shape3D<T>(param) {
