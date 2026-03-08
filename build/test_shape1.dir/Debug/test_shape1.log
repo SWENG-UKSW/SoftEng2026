@@ -1,0 +1,12 @@
+﻿  test_shape1.cpp
+C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeFactory.h(42,39): error C2061: błąd składniowy: identyfikator „Hexagon”
+  (kompilowanie pliku źródłowego „../src/tests/smoke/test_shape1.cpp”)
+      C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeFactory.h(42,39):
+      kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
+          C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\tests\smoke\test_shape1.cpp(18,61):
+          zobacz odwołanie do kompilowanego tworzenia wystąpienia „ShapeFactory<float>” klasy klasa szablon
+          C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeFactory.h(32,1):
+          podczas kompilowania funkcji składowej „IShape<float> *ShapeFactory<float>::create(const ShapeParam<float> &)” klasy klasa szablon
+              C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\tests\smoke\test_shape1.cpp(17,16):
+              zobacz pierwsze odwołanie do elementu „ShapeFactory<float>::create” w „test_shape1_AddFunction_Test::TestBody”
+  

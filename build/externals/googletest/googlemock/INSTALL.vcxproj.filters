@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\build\CMakeFiles\ea5436b914f0c3029e0b6747cef49973\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9C006508-E487-3FA0-AB75-07BA95474E00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Circle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Cone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Cylinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Ellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Ellipsoid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Hexagon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\IShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Pyramid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Rhombus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Shape2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Shape3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeParamIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeResultData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeResultIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Torus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Trapeze.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Circle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Cone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Cylinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Ellipsoid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Hexagon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\IShape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Pyramid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Rhombus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Shape2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Shape3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeParam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeParamIndex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeResultData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeResultIndex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\ShapeType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Torus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Trapeze.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\src\Triangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Dawid\Desktop\SoftEng2026\SoftEng2026\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{912E3D4A-F454-3521-B4DF-AA32293A0032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B25FCD1E-1380-32C7-BBFD-8FE5A951A511}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
