@@ -11,13 +11,24 @@ using namespace std;
 
 template<class T>
 class Ellipse : public Shape2D<T> {
+<<<<<<< HEAD
     public:
         inline ShapeResultData<T> compute();
         inline string print();
         inline Ellipse(const ShapeParam<T> & param);
+=======
+  public:
+    inline ShapeResult<T> compute();
+
+    inline string print();
+
+    inline Ellipse(const ShapeParam<T> & param);
+
+>>>>>>> main
 };
 
 template<class T>
+<<<<<<< HEAD
 inline ShapeResultData<T> Ellipse<T>::compute() {
     T w = this->m_param.get(ShapeParamIndex::PARAM_WIDTH);
     T h = this->m_param.get(ShapeParamIndex::PARAM_HEIGHT);
@@ -31,6 +42,10 @@ inline ShapeResultData<T> Ellipse<T>::compute() {
     res.set(ShapeResultIndex::RESULT_AREA, (T)(PI * a * b));
     
     return res;
+=======
+inline ShapeResult<T> Ellipse<T>::compute() {
+  return ShapeResult<T>();
+>>>>>>> main
 }
 
 template<class T>
