@@ -5,13 +5,14 @@
 #include "ShapeResultData.h"
 #include <string>
 #include <cmath>
-using namespace std;
 #include "ShapeParam.h"
+
+using namespace std;
 
 template<class T>
 class Sphere : public Shape3D<T> {
 public:
-    inline virtual ShapeResult<T> compute();
+    inline virtual ShapeResultData<T> compute();
 
     inline string print();
 
@@ -19,14 +20,14 @@ public:
 };
 
 template<class T>
-inline ShapeResult<T> Sphere<T>::compute() {
+inline ShapeResultData<T> Sphere<T>::compute() {
 
     T r = this->param.get(0);
 
-    T volume = (4.0 / 3.0) * M_PI * r * r * r;
-    T surface = 4 * M_PI * r * r;
+    T volume = (4.0 / 3.0) * 3.141592653589793 * r * r * r;
+    T surface = 4 * 3.141592653589793 * r * r;
 
-    return ShapeResult<T>(surface, volume);
+    return ShapeResultData<T>(surface, volume);
 }
 
 template<class T>
@@ -35,7 +36,8 @@ inline string Sphere<T>::print() {
 }
 
 template<class T>
-inline Sphere<T>::Sphere(const ShapeParam<T>& param) : Shape3D<T>(param) {
+inline Sphere<T>::Sphere(const ShapeParam<T>& param)
+    : Shape3D<T>(param) {
 }
 
 #endif
