@@ -1,0 +1,15 @@
+# build directory
+build/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.user
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# system
+.DS_Store
