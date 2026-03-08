@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260308-0823-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.31.6-msvc6"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-TI18BGL"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="15"
+	ModelID="0"
+	ModelName="AMD Ryzen 5 4600H with Radeon Graphics         "
+	ProcessorCacheSize="64"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="20093"
+	TotalPhysicalMemory="15741"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2994"
+	>
+	<Testing>
+		<StartDateTime>Mar 08 09:33 [NON-UTF-8-BYTE-0x8C]rodkowoeuropejski czas stand.</StartDateTime>
+		<StartTestTime>1772958789</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 08 09:33 [NON-UTF-8-BYTE-0x8C]rodkowoeuropejski czas stand.</EndDateTime>
+		<EndTestTime>1772958789</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

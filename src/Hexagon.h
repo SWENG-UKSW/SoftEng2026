@@ -19,20 +19,24 @@ class Hexagon : public Shape2D<T> {
 
 };
 template<class T>
-inline ShapeResultData<T> Hexagon<T>::compute() {
+inline ShapeResult<T> Hexagon<T>::compute() {
 
-  T side = this->param.getParam1();
+    ShapeResult<T> result;
+    T side = this->m_param.get_attrib(PARAM_WIDTH);
 
-  T area = (3 * sqrt(3) / 2) * side * side;
-  T perimeter = 6 * side;
+    T area = static_cast<T>((3 * sqrt(3.0) / 2) * side * side);
+    T perimeter = 6 * side;
 
-  return ShapeResultData<T>(area, perimeter);
+    result.set_attrib(RESULT_AREA, area);
+    result.set_attrib(RESULT_PERIMETER, perimeter);
+
+    return result;
 }
 
 template<class T>
 inline string Hexagon<T>::print() {
 
-  T side = this->param.getParam1();
+  T side = this->m_param.get_attrib(PARAM_WIDTH);
 
   return "Hexagon side=" + to_string(side);
 }
