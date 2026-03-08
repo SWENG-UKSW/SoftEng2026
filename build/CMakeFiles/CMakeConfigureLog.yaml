@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:49.
+      Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:40.
       
       Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdC\\CompilerIdC.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.45
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.47
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:51.
+      Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:42.
       
       Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.01
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.57
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-r6frxo"
-      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-r6frxo"
+      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-0e205p"
+      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-0e205p"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-r6frxo'
+        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-0e205p'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3dd41.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cc3dd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:53.
+        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:44.
         
-        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r6frxo\\cmTC_3dd41.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e205p\\cmTC_cc3dd.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_3dd41.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_cc3dd.dir\\Debug\\ÔÇŁ.
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r6frxo\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_3dd41.dir\\Debug\\cmTC_3dd41.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e205p\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_3dd41.dir\\Debug\\cmTC_3dd41.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_3dd41.dir\\Debug\\cmTC_3dd41.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3dd41.dir\\Debug\\\\" /Fd"cmTC_3dd41.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cc3dd.dir\\Debug\\\\" /Fd"cmTC_cc3dd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.44.35207.1 dla x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3dd41.dir\\Debug\\\\" /Fd"cmTC_3dd41.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_cc3dd.dir\\Debug\\\\" /Fd"cmTC_cc3dd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r6frxo\\Debug\\cmTC_3dd41.exe" /INCREMENTAL /ILK:"cmTC_3dd41.dir\\Debug\\cmTC_3dd41.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-r6frxo/Debug/cmTC_3dd41.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-r6frxo/Debug/cmTC_3dd41.lib" /MACHINE:X64  /machine:x64 cmTC_3dd41.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_3dd41.vcxproj -> C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r6frxo\\Debug\\cmTC_3dd41.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e205p\\Debug\\cmTC_cc3dd.exe" /INCREMENTAL /ILK:"cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-0e205p/Debug/cmTC_cc3dd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-0e205p/Debug/cmTC_cc3dd.lib" /MACHINE:X64  /machine:x64 cmTC_cc3dd.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_cc3dd.vcxproj -> C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e205p\\Debug\\cmTC_cc3dd.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_3dd41.dir\\Debug\\cmTC_3dd41.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_3dd41.dir\\Debug\\cmTC_3dd41.tlog\\cmTC_3dd41.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r6frxo\\cmTC_3dd41.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_cc3dd.dir\\Debug\\cmTC_cc3dd.tlog\\cmTC_cc3dd.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0e205p\\cmTC_cc3dd.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.23
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.33
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-toi526"
-      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-toi526"
+      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-h7eym2"
+      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-h7eym2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-toi526'
+        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-h7eym2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4160a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_72bff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:55.
+        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:46.
         
-        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-toi526\\cmTC_4160a.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h7eym2\\cmTC_72bff.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_4160a.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_72bff.dir\\Debug\\ÔÇŁ.
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-toi526\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_4160a.dir\\Debug\\cmTC_4160a.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h7eym2\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_72bff.dir\\Debug\\cmTC_72bff.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_4160a.dir\\Debug\\cmTC_4160a.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_4160a.dir\\Debug\\cmTC_4160a.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_72bff.dir\\Debug\\cmTC_72bff.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_72bff.dir\\Debug\\cmTC_72bff.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4160a.dir\\Debug\\\\" /Fd"cmTC_4160a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_72bff.dir\\Debug\\\\" /Fd"cmTC_72bff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.44.35207.1 dla x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4160a.dir\\Debug\\\\" /Fd"cmTC_4160a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_72bff.dir\\Debug\\\\" /Fd"cmTC_72bff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-toi526\\Debug\\cmTC_4160a.exe" /INCREMENTAL /ILK:"cmTC_4160a.dir\\Debug\\cmTC_4160a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-toi526/Debug/cmTC_4160a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-toi526/Debug/cmTC_4160a.lib" /MACHINE:X64  /machine:x64 cmTC_4160a.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_4160a.vcxproj -> C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-toi526\\Debug\\cmTC_4160a.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h7eym2\\Debug\\cmTC_72bff.exe" /INCREMENTAL /ILK:"cmTC_72bff.dir\\Debug\\cmTC_72bff.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-h7eym2/Debug/cmTC_72bff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-h7eym2/Debug/cmTC_72bff.lib" /MACHINE:X64  /machine:x64 cmTC_72bff.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_72bff.vcxproj -> C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h7eym2\\Debug\\cmTC_72bff.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_4160a.dir\\Debug\\cmTC_4160a.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_4160a.dir\\Debug\\cmTC_4160a.tlog\\cmTC_4160a.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-toi526\\cmTC_4160a.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_72bff.dir\\Debug\\cmTC_72bff.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_72bff.dir\\Debug\\cmTC_72bff.tlog\\cmTC_72bff.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-h7eym2\\cmTC_72bff.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.82
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.35
         
       exitCode: 0
   -
@@ -297,8 +297,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-tgx29t"
-      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-tgx29t"
+      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-b6wbh0"
+      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-b6wbh0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MDd"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -307,40 +307,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-tgx29t'
+        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-b6wbh0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7ea53.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_85d26.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:56.
+        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:49.
         
-        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\cmTC_7ea53.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\cmTC_85d26.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_7ea53.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_85d26.dir\\Debug\\ÔÇŁ.
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_7ea53.dir\\Debug\\cmTC_7ea53.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_85d26.dir\\Debug\\cmTC_85d26.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_7ea53.dir\\Debug\\cmTC_7ea53.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_7ea53.dir\\Debug\\cmTC_7ea53.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_85d26.dir\\Debug\\cmTC_85d26.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_85d26.dir\\Debug\\cmTC_85d26.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7ea53.dir\\Debug\\\\" /Fd"cmTC_7ea53.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_85d26.dir\\Debug\\\\" /Fd"cmTC_85d26.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\src.c"
           Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.44.35207.1 dla x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7ea53.dir\\Debug\\\\" /Fd"cmTC_7ea53.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\src.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_85d26.dir\\Debug\\\\" /Fd"cmTC_85d26.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\src.c"
           src.c
-        C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\src.c(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\cmTC_7ea53.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\cmTC_7ea53.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+        C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\src.c(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\cmTC_85d26.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\cmTC_85d26.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\cmTC_7ea53.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\cmTC_85d26.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy ClCompile) -> 
-          C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\src.c(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tgx29t\\cmTC_7ea53.vcxproj]
+          C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\src.c(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b6wbh0\\cmTC_85d26.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.44
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.85
         
       exitCode: 1
   -
@@ -354,8 +354,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-z0n8er"
-      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-z0n8er"
+      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-bjtmvo"
+      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-bjtmvo"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MDd"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -364,42 +364,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-z0n8er'
+        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-bjtmvo'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9a693.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dad18.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:57.
+        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:50.
         
-        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\cmTC_9a693.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\cmTC_dad18.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_9a693.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_dad18.dir\\Debug\\ÔÇŁ.
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_9a693.dir\\Debug\\cmTC_9a693.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_dad18.dir\\Debug\\cmTC_dad18.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_9a693.dir\\Debug\\cmTC_9a693.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_9a693.dir\\Debug\\cmTC_9a693.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_dad18.dir\\Debug\\cmTC_dad18.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_dad18.dir\\Debug\\cmTC_dad18.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9a693.dir\\Debug\\\\" /Fd"cmTC_9a693.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dad18.dir\\Debug\\\\" /Fd"cmTC_dad18.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\CheckFunctionExists.c"
           Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.44.35207.1 dla x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9a693.dir\\Debug\\\\" /Fd"cmTC_9a693.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dad18.dir\\Debug\\\\" /Fd"cmTC_dad18.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\Debug\\cmTC_9a693.exe" /INCREMENTAL /ILK:"cmTC_9a693.dir\\Debug\\cmTC_9a693.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-z0n8er/Debug/cmTC_9a693.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-z0n8er/Debug/cmTC_9a693.lib" /MACHINE:X64  /machine:x64 cmTC_9a693.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\cmTC_9a693.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\cmTC_9a693.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\Debug\\cmTC_dad18.exe" /INCREMENTAL /ILK:"cmTC_dad18.dir\\Debug\\cmTC_dad18.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-bjtmvo/Debug/cmTC_dad18.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-bjtmvo/Debug/cmTC_dad18.lib" /MACHINE:X64  /machine:x64 cmTC_dad18.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\cmTC_dad18.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\cmTC_dad18.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\cmTC_9a693.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\cmTC_dad18.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy Link) -> 
-          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z0n8er\\cmTC_9a693.vcxproj]
+          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjtmvo\\cmTC_dad18.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.68
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.16
         
       exitCode: 1
   -
@@ -413,8 +413,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-25ww7a"
-      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-25ww7a"
+      source: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-eqp5x0"
+      binary: "C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-eqp5x0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3 /MDd"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -423,42 +423,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-25ww7a'
+        Change Dir: 'C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-eqp5x0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7280a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6a636.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.14.8+a7a4d5af0 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 09:22:58.
+        Kompilacja rozpocz─Ö┼éa si─Ö 08.03.2026 10:36:52.
         
-        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\cmTC_7280a.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\cmTC_6a636.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_7280a.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_6a636.dir\\Debug\\ÔÇŁ.
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_7280a.dir\\Debug\\cmTC_7280a.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_6a636.dir\\Debug\\cmTC_6a636.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_7280a.dir\\Debug\\cmTC_7280a.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_7280a.dir\\Debug\\cmTC_7280a.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_6a636.dir\\Debug\\cmTC_6a636.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_6a636.dir\\Debug\\cmTC_6a636.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7280a.dir\\Debug\\\\" /Fd"cmTC_7280a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a636.dir\\Debug\\\\" /Fd"cmTC_6a636.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\CheckFunctionExists.c"
           Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.44.35207.1 dla x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7280a.dir\\Debug\\\\" /Fd"cmTC_7280a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6a636.dir\\Debug\\\\" /Fd"cmTC_6a636.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\Debug\\cmTC_7280a.exe" /INCREMENTAL /ILK:"cmTC_7280a.dir\\Debug\\cmTC_7280a.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-25ww7a/Debug/cmTC_7280a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-25ww7a/Debug/cmTC_7280a.lib" /MACHINE:X64  /machine:x64 cmTC_7280a.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\cmTC_7280a.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\cmTC_7280a.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\Debug\\cmTC_6a636.exe" /INCREMENTAL /ILK:"cmTC_6a636.dir\\Debug\\cmTC_6a636.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-eqp5x0/Debug/cmTC_6a636.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Dawid/Desktop/SoftEng2026/SoftEng2026/build/CMakeFiles/CMakeScratch/TryCompile-eqp5x0/Debug/cmTC_6a636.lib" /MACHINE:X64  /machine:x64 cmTC_6a636.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\cmTC_6a636.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\cmTC_6a636.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\cmTC_7280a.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\cmTC_6a636.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy Link) -> 
-          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-25ww7a\\cmTC_7280a.vcxproj]
+          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Dawid\\Desktop\\SoftEng2026\\SoftEng2026\\build\\CMakeFiles\\CMakeScratch\\TryCompile-eqp5x0\\cmTC_6a636.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.75
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.15
         
       exitCode: 1
 ...

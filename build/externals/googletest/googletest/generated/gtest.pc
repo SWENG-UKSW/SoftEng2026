@@ -1,5 +1,5 @@
-libdir=C:/Program Files/ShapeLib/lib
-includedir=C:/Program Files/ShapeLib/include
+libdir=C:/Program Files (x86)/ShapeLib/lib
+includedir=C:/Program Files (x86)/ShapeLib/include
 
 Name: gtest
 Description: GoogleTest (without main() function)
