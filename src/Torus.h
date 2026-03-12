@@ -17,25 +17,28 @@ public:
 
     inline Torus(const ShapeParam<T>& param);
 };
+template<class T>
+inline ShapeResult<T> Torus<T>::compute() {
 
-template <class T> inline ShapeResult<T> Torus<T>::compute()
-{
     ShapeResult<T> result;
 
-    T R = this->m_param.get_attrib(PARAM_RADIUS);
-    T r = this->m_param.get_attrib(PARAM_RADIUS_2);
+    const T PI = 3.141592653589793;
 
-    // const T PI = static_cast<T>(numbers::pi); // (C++20)
-    const T PI = static_cast<T>(M_PI);
+    T R = this->m_param.get(PARAM_RADIUS);
+    T r = this->m_param.get(PARAM_WIDTH);
 
-    T volume = 2 * PI * PI * R * r * r;
     T surface = 4 * PI * PI * R * r;
+    T volume = 2 * PI * PI * R * r * r;
 
-    result.set_attrib(RESULT_VOLUME, volume);
-    result.set_attrib(RESULT_SURFACE, surface);
+    result.set(RESULT_SURFACE, surface);
+    result.set(RESULT_VOLUME, volume);
 
     return result;
 }
+
+template<class T>
+std::string Torus<T>::print() {
+    return "";}
 
 template <class T> inline string Torus<T>::print()
 {
