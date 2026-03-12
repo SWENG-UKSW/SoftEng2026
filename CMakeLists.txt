@@ -1,6 +1,5 @@
 ﻿cmake_minimum_required(VERSION 3.10)
 project(ShapeLib)
-
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -34,14 +33,17 @@ enable_testing()
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 add_subdirectory(externals/googletest)
-
 add_executable(test_shape1 src/tests/smoke/test_shape1.cpp)
+add_executable(test_rhombus src/tests/smoke/test_rhombus.cpp)
 target_link_libraries(test_shape1 gtest gtest_main ShapeLib)
 target_include_directories(test_shape1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+target_link_libraries(test_rhombus gtest gtest_main ShapeLib)
+target_include_directories(test_rhombus PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
 
 #add_executable(test_shape2 src/tests/smoke/test_shape2.cpp)
 #target_link_libraries(test_shape2 gtest gtest_main ShapeLib)
 #target_include_directories(test_shape2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 
 add_test(NAME test_shape1 COMMAND test_shape1)
+add_test(NAME test_rhombus COMMAND test_rhombus)
 #add_test(NAME test_shape2 COMMAND test_shape2)

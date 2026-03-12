@@ -27,7 +27,7 @@ inline ShapeResult<T> Rhombus<T>::compute() {
 
     ShapeResult<T> res;
     res.set_attrib(ShapeResultIndex::RESULT_AREA, (d1 * d2) / 2);
-    return ShapeResult<T>();
+    return res;
 }
 
 template<class T>
