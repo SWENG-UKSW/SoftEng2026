@@ -13,7 +13,7 @@ using namespace std;
 
 template<class T>
 class Cylinder : public Shape3D<T> {
-  public:
+public:
     inline virtual ShapeResult<T> compute();
 
     inline string print();
@@ -28,7 +28,8 @@ inline ShapeResult<T> Cylinder<T>::compute() {
     T r = this->m_param.get_attrib(ShapeParamIndex::PARAM_RADIUS);
     T h = this->m_param.get_attrib(ShapeParamIndex::PARAM_HEIGHT);
 
-    if (r < static_cast<T>(0) || h < static_cast<T>(0)) {
+    if (r < static_cast<T>(0) || h < static_cast<T>(0))
+    {
         throw std::invalid_argument("Promien i wysokosc nie moga byc ujemne");
     }
 
