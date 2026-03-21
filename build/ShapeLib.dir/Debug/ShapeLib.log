@@ -1,0 +1,34 @@
+﻿  klasa_1.cpp
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2059: błąd składniowy: „;”
+  (kompilowanie pliku źródłowego „../src/klasa_1.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „../src/klasa_1.cpp”)
+  
+  klasa_2.cpp
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2059: błąd składniowy: „;”
+  (kompilowanie pliku źródłowego „../src/klasa_2.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „../src/klasa_2.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.h(10,15): error C2059: błąd składniowy: „;”
+  (kompilowanie pliku źródłowego „../src/klasa_2.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.h(10,15): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „../src/klasa_2.cpp”)
+  
+  klasa_3.cpp
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.h(10,15): error C2059: błąd składniowy: „;”
+  (kompilowanie pliku źródłowego „../src/klasa_3.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.h(10,15): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „../src/klasa_3.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2059: błąd składniowy: „;”
+  (kompilowanie pliku źródłowego „../src/klasa_3.cpp”)
+  
+C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h(9,15): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+  (kompilowanie pliku źródłowego „../src/klasa_3.cpp”)
+  
+  Generowanie kodu...

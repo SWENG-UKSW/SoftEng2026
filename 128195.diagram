@@ -1,0 +1,71 @@
+format 224
+
+classcanvas 128067 class_ref 134595 // IShape
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 class_drawing_mode class end
+  xyzwh 99 35 2000 139 81
+end
+classcanvas 128195 class_ref 134723 // IShape2D
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 47 202 2000
+end
+classcanvas 128451 class_ref 134851 // IShape3D
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 232 199 2000
+end
+classcanvas 128707 class_ref 134979 // Shape
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 516 143 2000
+end
+classcanvas 128835 class_ref 135107 // Dimensions
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 659 283 2000
+end
+classcanvas 129219 class_ref 135235 // Shape2D
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 226 325 2000
+end
+classcanvas 129603 class_ref 135363 // Shape3D
+  classdiagramsettings show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_multiplicity yes member_max_width 0 end
+  xyz 396 325 2000
+end
+relationcanvas 128323 relation_ref 134595 // <realization>
+  from ref 128195 z 2001 to ref 128067
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128579 relation_ref 134723 // <realization>
+  from ref 128451 z 2001 to ref 128067
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128963 relation_ref 134851 // <composition>
+  from ref 128707 z 2001 to ref 128835
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129091 relation_ref 134979 // <realization>
+  from ref 128707 z 2001 to ref 128067
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129347 relation_ref 135107 // <generalisation>
+  from ref 129219 z 2001 to ref 128707
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129475 relation_ref 135235 // <realization>
+  from ref 129219 z 2001 to ref 128195
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129731 relation_ref 135363 // <generalisation>
+  from ref 129603 z 2001 to ref 128707
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129859 relation_ref 135491 // <realization>
+  from ref 129603 z 2001 to ref 128451
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

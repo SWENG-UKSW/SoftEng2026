@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\131143\Desktop\131143\SoftEng131143\src\klasa_3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\131143\Desktop\131143\SoftEng131143\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C0FCD9D1-B695-34C7-BDFB-078254D8BF97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{03B58756-A220-342E-BB50-B3BB7DEAF00F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
