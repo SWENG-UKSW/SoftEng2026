@@ -22,15 +22,21 @@ inline ShapeResult<T> Sphere<T>::compute()
 {
     T r = this->m_param.get_attrib(ShapeParamIndex(0));
 
-    T volume = (4.0 / 3.0) * 3.141592653589793 * r * r * r;
-    T surface = 4 * 3.141592653589793 * r * r;
+ShapeResult<T> result;
 
-    ShapeResult<T> result;
-
-    result.set_attrib(ShapeResultIndex(0), surface);
-    result.set_attrib(ShapeResultIndex(1), volume);
-
+if (r <= 0) {
+    result.set_attrib(ShapeResultIndex(0), 0);
+    result.set_attrib(ShapeResultIndex(1), 0);
     return result;
+}
+
+T volume = (4.0 / 3.0) * 3.141592653589793 * r * r * r;
+T surface = 4 * 3.141592653589793 * r * r;
+
+result.set_attrib(ShapeResultIndex(0), surface);
+result.set_attrib(ShapeResultIndex(1), volume);
+
+return result;
 }
 
 template<class T>
