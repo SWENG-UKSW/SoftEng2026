@@ -14,13 +14,14 @@ TEST(test_sphere, HappyPath)
 
     ASSERT_TRUE(param.validate());
 
-    auto shape = std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
     ShapeResult<float> data = shape->compute();
 
     float surface = data.get_attrib(ShapeResultIndex(0));
-    float volume  = data.get_attrib(ShapeResultIndex(1));
+    float volume = data.get_attrib(ShapeResultIndex(1));
 
     ASSERT_NEAR(surface, 4 * M_PI, 0.001f);
     ASSERT_NEAR(volume, (4.0f / 3.0f) * M_PI, 0.001f);
@@ -33,7 +34,8 @@ TEST(test_sphere, ZeroRadius)
     param.set_attrib(ShapeParamIndex::PARAM_RADIUS, 0.f);
     param.type = ShapeType::PT_SPHERE;
 
-    auto shape = std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
     ShapeResult<float> data = shape->compute();
@@ -49,7 +51,8 @@ TEST(test_sphere, NegativeRadius)
     param.set_attrib(ShapeParamIndex::PARAM_RADIUS, -5.f);
     param.type = ShapeType::PT_SPHERE;
 
-    auto shape = std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
     ShapeResult<float> data = shape->compute();
@@ -69,13 +72,14 @@ TEST(test_sphere, MaxFloat)
 
     ASSERT_TRUE(param.validate());
 
-    auto shape = std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
     ShapeResult<float> data = shape->compute();
 
     float surface = data.get_attrib(ShapeResultIndex(0));
-    float volume  = data.get_attrib(ShapeResultIndex(1));
+    float volume = data.get_attrib(ShapeResultIndex(1));
 
     ASSERT_TRUE(std::isinf(surface) || std::isfinite(surface));
     ASSERT_TRUE(std::isinf(volume) || std::isfinite(volume));
@@ -90,7 +94,8 @@ TEST(test_sphere, SmallRadiusPrecision)
 
     ASSERT_TRUE(param.validate());
 
-    auto shape = std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
     ShapeResult<float> data = shape->compute();
