@@ -1,35 +1,75 @@
-
 #define _USE_MATH_DEFINES
 #include <cmath>
+#include <memory>
 #include <gtest/gtest.h>
 #include "ShapeFactory.h"
 
-TEST(test_shape1, AddFunction)
+TEST(SphereTest, HappyPath)
 {
-    bool res = true;
     ShapeParam<float> param;
-    res = param.set_attrib(ShapeParamIndex::PARAM_RADIUS, 1.f);
-    ASSERT_NE(res, false);
+    param.set_attrib(ShapeParamIndex::PARAM_RADIUS, 1.f);
+    param.type = ShapeType::PT_SPHERE;
 
-    param.type = ShapeType::PT_CIRCLE;
-
-    res = param.validate();
-    ASSERT_NE(res, false);
+    ASSERT_TRUE(param.validate());
 
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
 
-#if 0
-    ShapeResult<float> data=shape->compute();
-    float area=data.get_attrib(ShapeResultIndex::RESULT_AREA);
-    ASSERT_NE(area, 0.f);
-#endif
+    auto data = shape->compute();
 
-    shape.reset(nullptr);
-    ASSERT_EQ(shape.get(), nullptr);
+    float area = data.get_attrib(ShapeResultIndex::RESULT_AREA);
+    float volume = data.get_attrib(ShapeResultIndex::RESULT_VOLUME);
+
+    ASSERT_NEAR(area, 4 * M_PI, 0.001);
+    ASSERT_NEAR(volume, (4.0f / 3.0f) * M_PI, 0.001);
 }
 
+TEST(SphereTest, ZeroRadius)
+{
+    ShapeParam<float> param;
+    param.set_attrib(ShapeParamIndex::PARAM_RADIUS, 0.f);
+    param.type = ShapeType::PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
+
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+
+    auto data = shape->compute();
+
+    ASSERT_EQ(data.get_attrib(ShapeResultIndex::RESULT_AREA), 0.f);
+    ASSERT_EQ(data.get_attrib(ShapeResultIndex::RESULT_VOLUME), 0.f);
+}
+
+TEST(SphereTest, NegativeRadius)
+{
+    ShapeParam<float> param;
+    param.set_attrib(ShapeParamIndex::PARAM_RADIUS, -1.f);
+    param.type = ShapeType::PT_SPHERE;
+
+    ASSERT_FALSE(param.validate());
+}
+
+TEST(SphereTest, LargeRadius)
+{
+    ShapeParam<float> param;
+    param.set_attrib(ShapeParamIndex::PARAM_RADIUS, 1000.f);
+    param.type = ShapeType::PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
+
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+
+    auto data = shape->compute();
+
+    float area = data.get_attrib(ShapeResultIndex::RESULT_AREA);
+    float volume = data.get_attrib(ShapeResultIndex::RESULT_VOLUME);
+
+    ASSERT_NEAR(area, 4 * M_PI * 1000000.f, 1.0f);
+    ASSERT_NEAR(volume, (4.0f / 3.0f) * M_PI * 1000000000.f, 10.0f);
+}
 
 int main(int argc, char** argv)
 {
