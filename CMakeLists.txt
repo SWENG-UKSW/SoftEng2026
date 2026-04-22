@@ -32,11 +32,19 @@ enable_testing()
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 add_subdirectory(externals/googletest)
 
+
 # ===== TEST 1 =====
 add_executable(test_shape1 src/tests/smoke/test_shape1.cpp)
 target_link_libraries(test_shape1 gtest gtest_main ShapeLib)
 target_include_directories(test_shape1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_shape1 COMMAND test_shape1)
+
+
+
+add_executable(test_torus src/tests/smoke/test_torus.cpp)
+target_link_libraries(test_torus gtest gtest_main ShapeLib)
+target_include_directories(test_torus PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+add_test(NAME test_torus COMMAND test_torus)
 
 
 add_executable(test_trapeze src/tests/smoke/test_trapeze.cpp)
