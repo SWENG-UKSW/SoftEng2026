@@ -8,18 +8,16 @@
 using namespace std;
 #include "ShapeParam.h"
 
-template<class T>
-class Rectangle : public Shape2D<T> {
+template <class T> class Rectangle : public Shape2D<T> {
 public:
     inline virtual ShapeResultData<T> compute();
 
     inline string print();
 
     inline Rectangle(const ShapeParam<T>& param);
-
 };
-template<class T>
-inline ShapeResultData<T> Rectangle<T>::compute() {
+template <class T> inline ShapeResultData<T> Rectangle<T>::compute()
+{
 
     T a = this->param.getA();
     T b = this->param.getB();
@@ -30,8 +28,8 @@ inline ShapeResultData<T> Rectangle<T>::compute() {
     return ShapeResultData<T>(area, perimeter);
 }
 
-template<class T>
-inline string Rectangle<T>::print() {
+template <class T> inline string Rectangle<T>::print()
+{
 
     T a = this->param.getA();
     T b = this->param.getB();
@@ -40,8 +38,8 @@ inline string Rectangle<T>::print() {
 }
 
 
-template<class T>
-inline Rectangle<T>::Rectangle(const ShapeParam<T>& param) : Shape2D<T>(param) {
-}
+template <class T>
+inline Rectangle<T>::Rectangle(const ShapeParam<T>& param): Shape2D<T>(param)
+{}
 
 #endif
