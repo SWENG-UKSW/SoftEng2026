@@ -10,12 +10,12 @@ using namespace std;
 
 template<class T>
 class Rectangle : public Shape2D<T> {
-  public:
+public:
     inline virtual ShapeResultData<T> compute();
 
     inline string print();
 
-    inline Rectangle(const ShapeParam<T> & param);
+    inline Rectangle(const ShapeParam<T>& param);
 
 };
 template<class T>
@@ -41,7 +41,7 @@ inline string Rectangle<T>::print() {
 
 
 template<class T>
-inline Rectangle<T>::Rectangle(const ShapeParam<T> & param) : Shape2D<T>(param) {
+inline Rectangle<T>::Rectangle(const ShapeParam<T>& param) : Shape2D<T>(param) {
 }
 
 #endif
