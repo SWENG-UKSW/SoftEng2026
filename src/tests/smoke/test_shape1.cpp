@@ -29,3 +29,9 @@ TEST(test_shape1, AddFunction)
     shape.reset(nullptr);
     ASSERT_EQ(shape.get(), nullptr);
 }
+
+int main(int argc, char** argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
