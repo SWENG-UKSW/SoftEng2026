@@ -1,7 +1,6 @@
 #ifndef _RECTANGLE_H
 #define _RECTANGLE_H
 
-
 #include "Shape2D.h"
 #include "ShapeResultData.h"
 #include <string>
@@ -11,32 +10,32 @@ using namespace std;
 template <class T> class Rectangle : public Shape2D<T> {
 public:
     inline virtual ShapeResult<T> compute();
-
     inline string print();
-
     inline Rectangle(const ShapeParam<T>& param);
 };
+
 template <class T> inline ShapeResult<T> Rectangle<T>::compute()
 {
-
-    T a = this->param.getA();
-    T b = this->param.getB();
+    T a = this->m_param.get_attrib(PARAM_WIDTH);
+    T b = this->m_param.get_attrib(PARAM_HEIGHT);
 
     T area = a * b;
     T perimeter = 2 * (a + b);
 
-    return ShapeResult<T>(area, perimeter);
+    ShapeResult<T> res;
+    res.set_attrib(RESULT_AREA, area);
+    res.set_attrib(RESULT_PERIMETER, perimeter);
+
+    return res;
 }
 
 template <class T> inline string Rectangle<T>::print()
 {
-
-    T a = this->param.getA();
-    T b = this->param.getB();
+    T a = this->m_param.get_attrib(PARAM_WIDTH);
+    T b = this->m_param.get_attrib(PARAM_HEIGHT);
 
     return "Rectangle a=" + to_string(a) + " b=" + to_string(b);
 }
-
 
 template <class T>
 inline Rectangle<T>::Rectangle(const ShapeParam<T>& param): Shape2D<T>(param)
