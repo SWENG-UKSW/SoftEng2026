@@ -1,7 +1,6 @@
 #ifndef _SPHERE_H
 #define _SPHERE_H
 
-
 #include "Shape3D.h"
 #include "ShapeResultData.h"
 #include <string>
@@ -9,26 +8,32 @@
 using namespace std;
 #include "ShapeParam.h"
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 template<class T>
 class Sphere : public Shape3D<T> {
+  private:
+    ShapeParam<T> m_param;
+
   public:
     inline virtual ShapeResultData<T> compute();
-
     inline string print();
-
     inline Sphere(const ShapeParam<T> & param);
-
 };
+
 template<class T>
 inline ShapeResultData<T> Sphere<T>::compute() {
-   
-    T r = this->param.get(0);
+    T r = this->m_param.get(ShapeParamIndex::PARAM_RADIUS);
 
-    T volume = (4.0 / 3.0) * M_PI * r * r * r;
+    T volume = (T)((4.0 / 3.0) * M_PI) * r * r * r;
+    T surface = (T)(4 * M_PI) * r * r;
 
-    T surface = 4 * M_PI * r * r;
-
-  return ShapeResultData<T>(surface, volume);
+    ShapeResultData<T> res;
+    res.set(ShapeResultIndex::RESULT_AREA, surface);
+    res.set(ShapeResultIndex::RESULT_VOLUME, volume);
+    return res;
 }
 
 template<class T>
@@ -37,7 +42,7 @@ inline string Sphere<T>::print() {
 }
 
 template<class T>
-inline Sphere<T>::Sphere(const ShapeParam<T> & param) : Shape3D<T>(param) {
+inline Sphere<T>::Sphere(const ShapeParam<T> & param) : Shape3D<T>(param), m_param(param) {
 }
 
 #endif
