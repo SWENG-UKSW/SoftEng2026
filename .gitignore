@@ -13,3 +13,8 @@ CMakeFiles/
 
 # system
 .DS_Store
+# Visual Studio folder
+.vs/
+
+# output
+out/
