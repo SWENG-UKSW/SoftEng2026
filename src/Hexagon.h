@@ -1,5 +1,7 @@
-#ifndef _HEXAGON_H
+#ifdef _HEXAGON_H
 #define _HEXAGON_H
+#include <cmath>
+
 
 #include <cmath>
 #include "Shape2D.h"
@@ -17,10 +19,20 @@ public:
     inline Hexagon(const ShapeParam<T>& param);
 };
 
+    inline Hexagon(const ShapeParam<T>& param);
+};
 template <class T> inline ShapeResult<T> Hexagon<T>::compute()
 {
 
     ShapeResult<T> result;
+    T side = this->m_param.get_attrib(PARAM_WIDTH);
+
+    T area = static_cast<T>((3 * sqrt(3.0) / 2) * side * side);
+    T perimeter = 6 * side;
+
+    result.set_attrib(RESULT_AREA, area);
+    result.set_attrib(RESULT_PERIMETER, perimeter);
+
     T a = this->m_param.get_attrib(PARAM_RADIUS);
     T area = (3 * sqrt(3) * a * a) / 2;
     T perimeter = 6 * a;
@@ -32,6 +44,10 @@ template <class T> inline ShapeResult<T> Hexagon<T>::compute()
 
 template <class T> inline string Hexagon<T>::print()
 {
+
+    T side = this->m_param.get_attrib(PARAM_WIDTH);
+
+    return "Hexagon side=" + to_string(side);
     ShapeResult<T> result = compute();
     T area = result.get_attrib(RESULT_AREA);
     T perimeter = result.get_attrib(RESULT_PERIMETER);
