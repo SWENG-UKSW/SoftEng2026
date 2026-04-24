@@ -1,2 +1,5 @@
-.vscode
-.idea
+# Visual Studio folder
+.vs/
+
+# output
+out/
