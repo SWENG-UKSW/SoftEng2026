@@ -5,6 +5,7 @@
 #include "ShapeResultData.h"
 #include <string>
 #include <stdexcept>
+#include <cmath>
 
 using namespace std;
 #include "ShapeParam.h"

@@ -2,6 +2,7 @@
 #include <limits>
 #include <stdexcept>
 #include "Rectangle.h"
+#include <cmath>
 
 using RectangleTypes = ::testing::Types<float, double, long double>;
 
