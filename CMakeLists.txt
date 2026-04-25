@@ -39,12 +39,25 @@ target_link_libraries(test_shape1 gtest gtest_main ShapeLib)
 target_include_directories(test_shape1 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_shape1 COMMAND test_shape1)
 
+add_executable(test_cylinder src/tests/test_cylinder.cpp)
+target_link_libraries(test_cylinder gtest gtest_main ShapeLib)
+target_include_directories(test_cylinder PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
+add_test(NAME test_cylinder COMMAND test_cylinder)
+
+#add_executable(test_shape2 src/tests/smoke/test_shape2.cpp)
+#target_link_libraries(test_shape2 gtest gtest_main ShapeLib)
+#target_include_directories(test_shape2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 
 
 add_executable(test_torus src/tests/smoke/test_torus.cpp)
 target_link_libraries(test_torus gtest gtest_main ShapeLib)
 target_include_directories(test_torus PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_torus COMMAND test_torus)
+
+add_executable(test_rectangle src/tests/smoke/test_rectangle.cpp)
+target_link_libraries(test_rectangle gtest gtest_main ShapeLib)
+target_include_directories(test_rectangle PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
+add_test(NAME test_rectangle COMMAND test_rectangle)
 
 
 add_executable(test_trapeze src/tests/smoke/test_trapeze.cpp)
@@ -92,8 +105,15 @@ target_link_libraries(test_ellipse gtest gtest_main ShapeLib)
 target_include_directories(test_ellipse PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src  PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_ellipse COMMAND test_ellipse)
 
+
 # TESTS for SPHERE
 add_executable(test_sphere src/tests/smoke/test_sphere.cpp)
 target_link_libraries(test_sphere gtest gtest_main ShapeLib)
 target_include_directories(test_sphere PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_sphere COMMAND test_sphere)
+
+
+add_executable(test_hexagon src/tests/smoke/test_hexagon.cpp)
+target_link_libraries(test_hexagon gtest gtest_main ShapeLib)
+target_include_directories(test_hexagon PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
+add_test(NAME test_hexagon COMMAND test_hexagon)
