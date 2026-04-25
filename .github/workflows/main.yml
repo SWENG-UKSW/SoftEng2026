@@ -109,20 +109,32 @@ jobs:
     - name: Unpack build directory
       run: tar -xzf build-ubuntu.tar.gz
 
+    # Katalog na raporty XML musi istniec PRZED uruchomieniem testow,
+    # bo gtest nie tworzy go automatycznie.
+    - name: Prepare reports directory
+      run: mkdir -p build/gtest_reports
+
     - name: Run tests
       working-directory: build
       run: ctest -C Debug --output-on-failure --verbose
       env:
-        # Trailing underscore - gtest dopisze nazwe binarki do prefiksu,
-        # dzieki czemu kazda binarka testowa zapisuje do osobnego pliku XML
-        # zamiast nadpisywac jeden wspolny.
-        GTEST_OUTPUT: "xml:gtest_results_"
+        # Trailing slash - to jest klucz: gtest interpretuje wartosc
+        # konczaca sie slashem jako KATALOG i tworzy w nim osobny plik
+        # XML dla kazdej binarki testowej (nazwany od targeta).
+        # Bez slasha gtest traktuje to jako PLIK i kazda binarka nadpisuje
+        # ten sam plik - byl to bug w poprzedniej wersji workflow.
+        GTEST_OUTPUT: "xml:gtest_reports/"
+
+    - name: List generated reports
+      if: always()
+      working-directory: build
+      run: ls -la gtest_reports/ || echo "No reports generated"
 
     - name: Publish Test Report
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
-        files: "build/gtest_results_*.xml"
+        files: "build/gtest_reports/*.xml"
 
   # =========================================================================
   # FORMAT CHECK - niezalezny od build/test
