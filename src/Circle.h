@@ -7,7 +7,7 @@
 
 #include <sstream>
 #include <string>
-#include <stdexcept> 
+#include <stdexcept>
 
 template <class T> class Circle : public Shape2D<T> {
 public:
