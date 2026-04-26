@@ -16,7 +16,9 @@ TYPED_TEST(TorusTypedTest, ComputeCorrectValues)
 
     param.set_attrib(PARAM_RADIUS, static_cast<TypeParam>(5));
     param.set_attrib(PARAM_RADIUS_2, static_cast<TypeParam>(2));
+    param.type = ShapeType::PT_TORUS;
 
+    ASSERT_TRUE(param.validate());
     Torus<TypeParam> torus(param);
 
     ShapeResult<TypeParam> result = torus.compute();
@@ -73,6 +75,9 @@ TYPED_TEST(TorusTypedTest, NegativeRadius)
 
     param.set_attrib(PARAM_RADIUS, static_cast<TypeParam>(-5));
     param.set_attrib(PARAM_RADIUS_2, static_cast<TypeParam>(2));
+    param.type = ShapeType::PT_TORUS;
+
+    ASSERT_FALSE(param.validate());
 
     Torus<TypeParam> torus(param);
 
