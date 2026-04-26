@@ -6,6 +6,7 @@
 using namespace std;
 #include "ShapeType.h"
 #include "ShapeParamIndex.h"
+#include <stdexcept>
 
 template<class T>
 class ShapeParam {
@@ -36,9 +37,19 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
-template<class T>
-inline bool ShapeParam<T>::validate() const {
-  return true;
+template <class T> inline bool ShapeParam<T>::validate() const
+{
+
+    if (attribs.size() > PARAM_RADIUS && attribs[PARAM_RADIUS] < 0)
+        throw std::invalid_argument("Radius must be > 0");
+
+    if (attribs.size() > PARAM_HEIGHT && attribs[PARAM_HEIGHT] <= 0)
+        throw std::invalid_argument("Height must be > 0");
+
+    if (attribs.size() > PARAM_WIDTH && attribs[PARAM_WIDTH] <= 0)
+        throw std::invalid_argument("Width must be > 0");
+
+    return true;
 }
 
 #endif
