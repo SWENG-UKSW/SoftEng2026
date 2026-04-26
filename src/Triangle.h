@@ -23,28 +23,23 @@ public:
 
 template <class T> inline ShapeResult<T> Triangle<T>::compute()
 {
+    if (!this->m_param.validate())
+    {
+        throw std::invalid_argument("Invalid triangle parameters");
+    }
+
     ShapeResult<T> result;
 
     T a = this->m_param.get_attrib(PARAM_SIDE_A);
     T b = this->m_param.get_attrib(PARAM_SIDE_B);
     T c = this->m_param.get_attrib(PARAM_SIDE_C);
 
-    if (a <= 0 || b <= 0 || c <= 0)
-    {
-        throw invalid_argument("Triangle sides must be positive");
-    }
-
-    if (a + b <= c || a + c <= b || b + c <= a)
-    {
-        throw invalid_argument("Triangle inequality violated");
-    }
-
-    T perimiter = a + b + c;
-    T s = perimiter / 2;
+    T perimeter = a + b + c;
+    T s = perimeter / 2;
     T area = sqrt(s * (s - a) * (s - b) * (s - c));
 
     result.set_attrib(ShapeResultIndex::RESULT_AREA, area);
-    result.set_attrib(ShapeResultIndex::RESULT_PERIMETER, perimiter);
+    result.set_attrib(ShapeResultIndex::RESULT_PERIMETER, perimeter);
 
     return result;
 }

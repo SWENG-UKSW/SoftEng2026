@@ -1,4 +1,4 @@
-#define _USE_MATH_DEFINES
+﻿#define _USE_MATH_DEFINES
 #include <cmath>
 #include <gtest/gtest.h>
 #include "ShapeFactory.h"
@@ -13,9 +13,13 @@ TYPED_TEST_SUITE(TriangleTypedTest, TriangleTypes);
 TYPED_TEST(TriangleTypedTest, ComputeCorrectValues)
 {
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, static_cast<TypeParam>(3));
     param.set_attrib(PARAM_SIDE_B, static_cast<TypeParam>(4));
     param.set_attrib(PARAM_SIDE_C, static_cast<TypeParam>(5));
+
+    ASSERT_TRUE(param.validate());
 
     Triangle<TypeParam> tri(param);
 
@@ -31,6 +35,8 @@ TYPED_TEST(TriangleTypedTest, ComputeCorrectValues)
 TYPED_TEST(TriangleTypedTest, ZeroSideThrows)
 {
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, static_cast<TypeParam>(0));
     param.set_attrib(PARAM_SIDE_B, static_cast<TypeParam>(4));
     param.set_attrib(PARAM_SIDE_C, static_cast<TypeParam>(5));
@@ -43,6 +49,8 @@ TYPED_TEST(TriangleTypedTest, ZeroSideThrows)
 TYPED_TEST(TriangleTypedTest, NegativeSideThrows)
 {
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, static_cast<TypeParam>(-3));
     param.set_attrib(PARAM_SIDE_B, static_cast<TypeParam>(4));
     param.set_attrib(PARAM_SIDE_C, static_cast<TypeParam>(5));
@@ -55,6 +63,8 @@ TYPED_TEST(TriangleTypedTest, NegativeSideThrows)
 TYPED_TEST(TriangleTypedTest, InvalidTriangleThrows)
 {
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, static_cast<TypeParam>(1));
     param.set_attrib(PARAM_SIDE_B, static_cast<TypeParam>(2));
     param.set_attrib(PARAM_SIDE_C, static_cast<TypeParam>(5));
@@ -67,7 +77,10 @@ TYPED_TEST(TriangleTypedTest, InvalidTriangleThrows)
 TYPED_TEST(TriangleTypedTest, LargeValuesOverflow)
 {
     TypeParam max_val = std::numeric_limits<TypeParam>::max() / 3;
+
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, max_val);
     param.set_attrib(PARAM_SIDE_B, max_val);
     param.set_attrib(PARAM_SIDE_C, max_val);
@@ -84,6 +97,8 @@ TYPED_TEST(TriangleTypedTest, LargeValuesOverflow)
 TYPED_TEST(TriangleTypedTest, PrintContainsValues)
 {
     ShapeParam<TypeParam> param;
+    param.type = ShapeType::PT_TRIANGLE;
+
     param.set_attrib(PARAM_SIDE_A, static_cast<TypeParam>(3));
     param.set_attrib(PARAM_SIDE_B, static_cast<TypeParam>(4));
     param.set_attrib(PARAM_SIDE_C, static_cast<TypeParam>(5));
