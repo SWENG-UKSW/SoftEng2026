@@ -47,11 +47,17 @@ template <class T> inline bool ShapeParam<T>::validate() const
                 return false;
             }
             break;
+        case PT_CIRCLE:
+            if (get_attrib(ShapeParamIndex::PARAM_RADIUS) < 0)
+            {
+                return false;
+            }
 
         default: break;
     }
 
     return true;
 }
+
 
 #endif
