@@ -17,6 +17,7 @@ public:
 
 template <class T> inline ShapeResult<T> Circle<T>::compute()
 {
+    this->m_param.validate();
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
     const double PI = 3.14159265358979323846;
 
