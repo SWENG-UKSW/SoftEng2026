@@ -39,13 +39,16 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
 // POPRAWKA: Implementacja metody validate
 template<class T>
 inline bool ShapeParam<T>::validate() const {
-  // Sprawdzamy wszystkie zapisane atrybuty (promień, szerokość, wysokość itp.)
-  for (size_t i = 0; i < attribs.size(); ++i) {
-      if (attribs[i] < 0) {
-          throw std::invalid_argument("Parametr figury nie może być ujemny!");
-      }
-  }
-  return true;
+    // Sprawdzamy wszystkie zapisane atrybuty (promień, szerokość, wysokość
+    // itp.)
+    for (size_t i = 0; i < attribs.size(); ++i)
+    {
+        if (attribs[i] < 0)
+        {
+            throw std::invalid_argument("Parametr figury nie może być ujemny!");
+        }
+    }
+    return true;
 }
 
 #endif
