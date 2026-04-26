@@ -12,13 +12,15 @@ using namespace std;
 
 template <class T> class Pyramid : public Shape3D<T> {
 public:
-    inline ShapeResult<T> compute();
-    inline string print();
+    inline ShapeResult<T> compute() override;
+    inline string print() override;
     inline Pyramid(const ShapeParam<T>& param);
 };
 
 template <class T> inline ShapeResult<T> Pyramid<T>::compute()
 {
+    this->m_param.validate(); // Poprawka: walidacja parametrów
+
     T width = this->m_param.get_attrib(PARAM_WIDTH);
     T height = this->m_param.get_attrib(PARAM_HEIGHT);
     T depth = this->m_param.get_attrib(PARAM_DEPTH);
@@ -34,7 +36,6 @@ template <class T> inline ShapeResult<T> Pyramid<T>::compute()
     double surface = (w * d) + (w * slantWidth) + (d * slantDepth);
 
     ShapeResult<T> result;
-
     result.set_attrib(RESULT_VOLUME, static_cast<T>(volume));
     result.set_attrib(RESULT_SURFACE, static_cast<T>(surface));
 
@@ -46,11 +47,9 @@ template <class T> inline string Pyramid<T>::print()
     T width = this->m_param.get_attrib(PARAM_WIDTH);
     T height = this->m_param.get_attrib(PARAM_HEIGHT);
     T depth = this->m_param.get_attrib(PARAM_DEPTH);
-
     ShapeResult<T> result = compute();
 
     ostringstream out;
-
     out << "=== SOLID: PYRAMID ===" << endl;
     out << "Width: " << width << endl;
     out << "Height: " << height << endl;
