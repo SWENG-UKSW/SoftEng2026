@@ -36,9 +36,23 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
-template<class T>
-inline bool ShapeParam<T>::validate() const {
-  return true;
+template <class T> inline bool ShapeParam<T>::validate() const
+{
+    switch (type)
+    {
+        case PT_ELLIPSE:
+
+            if (get_attrib(ShapeParamIndex::PARAM_RADIUS) < 0
+                || get_attrib(ShapeParamIndex::PARAM_RADIUS_2) < 0)
+            {
+                return false;
+            }
+            break;
+
+        default: break;
+    }
+
+    return true; 
 }
 
 #endif
