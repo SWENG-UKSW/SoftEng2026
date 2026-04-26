@@ -1,4 +1,4 @@
-#include "ShapeResultIndex.h" 
+#include "ShapeResultIndex.h"
 #include <gtest/gtest.h>
 #include <stdexcept>
 #include <limits>
