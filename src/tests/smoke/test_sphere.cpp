@@ -1,6 +1,7 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <gtest/gtest.h>
+#include <memory>
 #include <limits>
 #include "ShapeFactory.h"
 
@@ -9,6 +10,8 @@ TEST(SphereTest, HappyPath_r1)
     ShapeParam<float> param;
     param.set_attrib(PARAM_RADIUS, 1.f);
     param.type = PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
 
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
@@ -28,6 +31,8 @@ TEST(SphereTest, HappyPath_r5)
     param.set_attrib(PARAM_RADIUS, 5.f);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -46,6 +51,8 @@ TEST(SphereTest, EdgeCase_r0)
     param.set_attrib(PARAM_RADIUS, 0.f);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -62,6 +69,8 @@ TEST(SphereTest, EdgeCase_LargeRadius)
     param.set_attrib(PARAM_RADIUS, maxVal);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -77,13 +86,7 @@ TEST(SphereTest, InvalidData_NegativeRadius)
     param.set_attrib(PARAM_RADIUS, -1.f);
     param.type = PT_SPHERE;
 
-    auto shape =
-        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
-    ASSERT_NE(shape, nullptr);
-
-    ShapeResult<float> data = shape->compute();
-
-    EXPECT_LT(data.get_attrib(RESULT_VOLUME), 0.f);
+    EXPECT_FALSE(param.validate());
 }
 
 TEST(SphereTest, GeometricLogic_SurfaceVolumeRelation)
@@ -91,6 +94,8 @@ TEST(SphereTest, GeometricLogic_SurfaceVolumeRelation)
     ShapeParam<float> param;
     param.set_attrib(PARAM_RADIUS, 1.f);
     param.type = PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
 
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
