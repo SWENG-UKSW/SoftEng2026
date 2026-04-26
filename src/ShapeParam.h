@@ -36,9 +36,18 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
-template<class T>
-inline bool ShapeParam<T>::validate() const {
-  return true;
+template <class T> inline bool ShapeParam<T>::validate() const
+{
+
+    T width = get_attrib(PARAM_WIDTH);
+    T depth = get_attrib(PARAM_DEPTH);
+    T height = get_attrib(PARAM_HEIGHT);
+
+
+    return (width > static_cast<T>(0)) && (depth > static_cast<T>(0))
+        && (height > static_cast<T>(0));
+
+
 }
 
 #endif
