@@ -1,9 +1,9 @@
-#include "ShapeResultIndex.h" // Upewnij się, że masz ten plik lub użyj odpowiednich stałych
+#include "ShapeResultIndex.h" 
 #include <gtest/gtest.h>
 #include <stdexcept>
 #include <limits>
 #include <cmath>
-#include <memory>             // Wymagane dla std::unique_ptr
+#include <memory> // Wymagane dla std::unique_ptr
 #include "Circle.h"
 #include "ShapeParam.h"
 
@@ -14,7 +14,8 @@ TEST(CircleTest, HappyPath_StandardValues)
     param.set_attrib(PARAM_RADIUS, 5.0);
 
     // Wymaganie: użycie std::unique_ptr
-    std::unique_ptr<Circle<double>> circle = std::make_unique<Circle<double>>(param);
+    std::unique_ptr<Circle<double>> circle =
+        std::make_unique<Circle<double>>(param);
     auto result = circle->compute();
 
     EXPECT_NEAR(result.get_attrib(RESULT_AREA), 78.5398, 0.01);
@@ -57,6 +58,7 @@ TEST(CircleTest, InvalidData_NegativeRadiusThrowsException)
     auto circle = std::make_unique<Circle<double>>(param);
 
     // Oczekujemy rzucenia wyjątku invalid_argument z powodu ujemnego promienia.
-    // Zakładamy, że zaktualizowana metoda validate() jest wywoływana wewnątrz compute().
+    // Zakładamy, że zaktualizowana metoda validate() jest wywoływana wewnątrz
+    // compute().
     EXPECT_THROW(circle->compute(), std::invalid_argument);
 }
