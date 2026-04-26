@@ -21,6 +21,8 @@ public:
 
 template <class T> inline ShapeResult<T> Torus<T>::compute()
 {
+    this->m_param.validate();
+
     ShapeResult<T> result;
 
     T R = this->m_param.get_attrib(PARAM_RADIUS);
