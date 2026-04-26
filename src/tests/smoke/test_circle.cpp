@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include <limits>
 #include <cmath>
+#include <memory> // Wymagane dla std::unique_ptr
 #include "Circle.h"
 #include "ShapeParam.h"
 
@@ -12,8 +13,10 @@ TEST(CircleTest, HappyPath_StandardValues)
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, 5.0);
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
+    // Wymaganie: użycie std::unique_ptr
+    std::unique_ptr<Circle<double>> circle =
+        std::make_unique<Circle<double>>(param);
+    auto result = circle->compute();
 
     EXPECT_NEAR(result.get_attrib(RESULT_AREA), 78.5398, 0.01);
     EXPECT_NEAR(result.get_attrib(RESULT_PERIMETER), 31.4159, 0.01);
@@ -25,35 +28,37 @@ TEST(CircleTest, EdgeCase_ZeroRadius)
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, 0.0);
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
+    auto circle = std::make_unique<Circle<double>>(param);
+    auto result = circle->compute();
 
     EXPECT_DOUBLE_EQ(result.get_attrib(RESULT_AREA), 0.0);
     EXPECT_DOUBLE_EQ(result.get_attrib(RESULT_PERIMETER), 0.0);
 }
 
-// 2. WARTOŚCI GRANICZNE: Ekstremalnie duże liczby
+// 3. WARTOŚCI GRANICZNE: Ekstremalnie duże liczby
 TEST(CircleTest, EdgeCase_MaxDoubleValue)
 {
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, std::numeric_limits<double>::max());
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
+    auto circle = std::make_unique<Circle<double>>(param);
+    auto result = circle->compute();
 
     // Po pomnożeniu dwóch maksymalnych wartości przez siebie nastąpi
     // przepełnienie. Wynik pola będzie matematyczną nieskończonością (inf).
     EXPECT_TRUE(std::isinf(result.get_attrib(RESULT_AREA)));
 }
 
-// 3. DANE NIEPOPRAWNE / 4. LOGIKA GEOMETRYCZNA: Ujemny promień
+// 4. DANE NIEPOPRAWNE / LOGIKA GEOMETRYCZNA: Ujemny promień
 TEST(CircleTest, InvalidData_NegativeRadiusThrowsException)
 {
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, -5.0);
 
-    Circle<double> circle(param);
+    auto circle = std::make_unique<Circle<double>>(param);
 
-    // Oczekujemy rzucenia wyjątku invalid_argument z powodu ujemnego promienia
-    EXPECT_THROW(circle.compute(), std::invalid_argument);
+    // Oczekujemy rzucenia wyjątku invalid_argument z powodu ujemnego promienia.
+    // Zakładamy, że zaktualizowana metoda validate() jest wywoływana wewnątrz
+    // compute().
+    EXPECT_THROW(circle->compute(), std::invalid_argument);
 }

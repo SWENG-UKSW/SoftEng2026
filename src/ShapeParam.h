@@ -1,8 +1,8 @@
 #ifndef _SHAPEPARAM_H
 #define _SHAPEPARAM_H
 
-
 #include <vector>
+#include <stdexcept> // DODANE: Wymagane do rzucania std::invalid_argument
 using namespace std;
 #include "ShapeType.h"
 #include "ShapeParamIndex.h"
@@ -11,7 +11,6 @@ template<class T>
 class ShapeParam {
   private:
     vector<T> attribs;
-
 
   public:
     ShapeType type;
@@ -23,6 +22,7 @@ class ShapeParam {
     inline bool validate() const;
 
 };
+
 template<class T>
 inline T ShapeParam<T>::get_attrib(ShapeParamIndex ind) const {
     if(ind<attribs.size()) return attribs[ind];
@@ -36,9 +36,19 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
+// POPRAWKA: Implementacja metody validate
 template<class T>
 inline bool ShapeParam<T>::validate() const {
-  return true;
+    // Sprawdzamy wszystkie zapisane atrybuty (promień, szerokość, wysokość
+    // itp.)
+    for (size_t i = 0; i < attribs.size(); ++i)
+    {
+        if (attribs[i] < 0)
+        {
+            throw std::invalid_argument("Parametr figury nie może być ujemny!");
+        }
+    }
+    return true;
 }
 
 #endif
