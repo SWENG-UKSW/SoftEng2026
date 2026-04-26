@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 #include "ShapeFactory.h"
 #include <limits>
+#include <chrono>
 
 
 TEST(test_rhombus, AreaHappyPath)
@@ -97,4 +98,35 @@ TEST(test_rhombus, SecondDiagonalZero)
     float area = data.get_attrib(ShapeResultIndex::RESULT_AREA);
 
     ASSERT_EQ(area, 0.f);
+}
+
+
+TEST(test_rhombus, Performance100IterationsUnder1ms)
+{
+    ShapeParam<float> param;
+
+    ASSERT_TRUE(param.set_attrib(ShapeParamIndex::PARAM_DIAGONAL, 6.f));
+    ASSERT_TRUE(param.set_attrib(ShapeParamIndex::PARAM_DIAGONAL_2, 8.f));
+    param.type = ShapeType::PT_RHOMBUS;
+    ASSERT_TRUE(param.validate());
+
+    auto shape =
+        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+    ASSERT_NE(shape, nullptr);
+
+    auto start = std::chrono::high_resolution_clock::now();
+
+    for (int i = 0; i < 100; i++)
+    {
+        ShapeResult<float> data = shape->compute();
+        float area = data.get_attrib(ShapeResultIndex::RESULT_AREA);
+        ASSERT_NEAR(area, 24.f, 0.001f);
+    }
+
+    auto end = std::chrono::high_resolution_clock::now();
+
+    auto duration =
+        std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+    ASSERT_LT(duration.count(), 1000);
 }
