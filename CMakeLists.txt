@@ -43,7 +43,7 @@ target_include_directories(test_circle PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PR
 add_test(NAME test_circle COMMAND test_circle)
 
 # Test Performance (100 iteracji, < 1ms, multi-type, unique_ptr)
-add_executable(test_performance src/tests/performance/test_performance.cpp)
+add_executable(test_performance src/tests/test_performance.cpp)
 target_link_libraries(test_performance gtest gtest_main ShapeLib)
 target_include_directories(test_performance PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src PRIVATE ${PROJECT_BINARY_DIR})
 add_test(NAME test_performance COMMAND test_performance)
