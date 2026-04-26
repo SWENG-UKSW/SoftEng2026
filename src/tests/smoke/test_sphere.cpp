@@ -1,7 +1,9 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <gtest/gtest.h>
+#include <memory>
 #include <limits>
+#include <chrono>
 #include "ShapeFactory.h"
 
 TEST(SphereTest, HappyPath_r1)
@@ -9,6 +11,8 @@ TEST(SphereTest, HappyPath_r1)
     ShapeParam<float> param;
     param.set_attrib(PARAM_RADIUS, 1.f);
     param.type = PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
 
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
@@ -28,6 +32,8 @@ TEST(SphereTest, HappyPath_r5)
     param.set_attrib(PARAM_RADIUS, 5.f);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -46,6 +52,8 @@ TEST(SphereTest, EdgeCase_r0)
     param.set_attrib(PARAM_RADIUS, 0.f);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -62,6 +70,8 @@ TEST(SphereTest, EdgeCase_LargeRadius)
     param.set_attrib(PARAM_RADIUS, maxVal);
     param.type = PT_SPHERE;
 
+    ASSERT_TRUE(param.validate());
+
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
     ASSERT_NE(shape, nullptr);
@@ -77,13 +87,7 @@ TEST(SphereTest, InvalidData_NegativeRadius)
     param.set_attrib(PARAM_RADIUS, -1.f);
     param.type = PT_SPHERE;
 
-    auto shape =
-        std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
-    ASSERT_NE(shape, nullptr);
-
-    ShapeResult<float> data = shape->compute();
-
-    EXPECT_LT(data.get_attrib(RESULT_VOLUME), 0.f);
+    EXPECT_FALSE(param.validate());
 }
 
 TEST(SphereTest, GeometricLogic_SurfaceVolumeRelation)
@@ -91,6 +95,8 @@ TEST(SphereTest, GeometricLogic_SurfaceVolumeRelation)
     ShapeParam<float> param;
     param.set_attrib(PARAM_RADIUS, 1.f);
     param.type = PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
 
     auto shape =
         std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
@@ -102,6 +108,31 @@ TEST(SphereTest, GeometricLogic_SurfaceVolumeRelation)
     EXPECT_GT(surface, 0.f);
     EXPECT_GT(volume, 0.f);
     EXPECT_GT(surface, volume);
+}
+
+TEST(SphereTest, Performance_100Iterations)
+{
+    ShapeParam<float> param;
+    param.set_attrib(PARAM_RADIUS, 1.f);
+    param.type = PT_SPHERE;
+
+    ASSERT_TRUE(param.validate());
+
+    auto start = std::chrono::high_resolution_clock::now();
+
+    for (int i = 0; i < 100; ++i)
+    {
+        auto shape =
+            std::unique_ptr<IShape<float>>(ShapeFactory<float>::create(param));
+        ShapeResult<float> data = shape->compute();
+    }
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto elapsed =
+        std::chrono::duration_cast<std::chrono::milliseconds>(end - start)
+            .count();
+
+    EXPECT_LT(elapsed, 1);
 }
 
 int main(int argc, char** argv)
