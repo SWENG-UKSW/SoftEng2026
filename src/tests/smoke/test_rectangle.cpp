@@ -3,6 +3,7 @@
 #include <stdexcept>
 #include "Rectangle.h"
 #include <cmath>
+#include <chrono>
 
 using RectangleTypes = ::testing::Types<float, double, long double>;
 
@@ -91,4 +92,31 @@ TEST(test_rectangle, PrintContainsValues)
     ASSERT_NE(text.find("Rectangle"), std::string::npos);
     ASSERT_NE(text.find("4"), std::string::npos);
     ASSERT_NE(text.find("3"), std::string::npos);
+}
+
+TEST(PerformanceTest, TorusCompute100Iterations)
+{
+    const int iterations = 100;
+
+    ShapeParam<double> param;
+    param.set_attrib(PARAM_WIDTH, 5.0);
+    param.set_attrib(PARAM_HEIGHT, 2.0);
+
+    Rectangle<double> rectangle(param);
+
+    double sink = 0;
+
+    auto start = chrono::high_resolution_clock::now();
+
+    for (int i = 0; i < iterations; ++i)
+    {
+        auto res = rectangle.compute();
+        sink += res.get_attrib(RESULT_AREA);
+    }
+
+    auto end = chrono::high_resolution_clock::now();
+
+    auto duration = chrono::duration<double, micro>(end - start);
+
+    EXPECT_LT(duration.count(), 150.0);
 }
