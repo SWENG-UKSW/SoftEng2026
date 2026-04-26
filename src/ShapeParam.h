@@ -38,12 +38,11 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
 
 template<class T>
 inline bool ShapeParam<T>::validate() const {
-    switch (type) {
-        case PT_SPHERE:
-            return get_attrib(PARAM_RADIUS) >= 0;
+    switch (type) 
+    {
+        case PT_SPHERE: return get_attrib(PARAM_RADIUS) >= 0;
 
-        default:
-            return true;
+        default: return true;
     }
 }
 
