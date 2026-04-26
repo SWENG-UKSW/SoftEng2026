@@ -1,3 +1,4 @@
+#include "ShapeResultIndex.h"
 #include <gtest/gtest.h>
 #include <stdexcept>
 #include <limits>
@@ -5,12 +6,12 @@
 #include "Circle.h"
 #include "ShapeParam.h"
 
-
 // 1. HAPPY PATH: Zwykłe wartości (np. r=5)
-TEST(CircleTest, HappyPath_StandardValues) {
+TEST(CircleTest, HappyPath_StandardValues)
+{
     ShapeParam<double> param;
-    param.set_attrib(PARAM_RADIUS, 5.0); 
-    
+    param.set_attrib(PARAM_RADIUS, 5.0);
+
     Circle<double> circle(param);
     auto result = circle.compute();
 
@@ -19,10 +20,11 @@ TEST(CircleTest, HappyPath_StandardValues) {
 }
 
 // 2. WARTOŚCI GRANICZNE: Obsługa zera (r=0)
-TEST(CircleTest, EdgeCase_ZeroRadius) {
+TEST(CircleTest, EdgeCase_ZeroRadius)
+{
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, 0.0);
-    
+
     Circle<double> circle(param);
     auto result = circle.compute();
 
@@ -31,23 +33,25 @@ TEST(CircleTest, EdgeCase_ZeroRadius) {
 }
 
 // 2. WARTOŚCI GRANICZNE: Ekstremalnie duże liczby
-TEST(CircleTest, EdgeCase_MaxDoubleValue) {
+TEST(CircleTest, EdgeCase_MaxDoubleValue)
+{
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, std::numeric_limits<double>::max());
-    
+
     Circle<double> circle(param);
     auto result = circle.compute();
-    
-    // Po pomnożeniu dwóch maksymalnych wartości przez siebie nastąpi przepełnienie.
-    // Wynik pola będzie matematyczną nieskończonością (inf).
+
+    // Po pomnożeniu dwóch maksymalnych wartości przez siebie nastąpi
+    // przepełnienie. Wynik pola będzie matematyczną nieskończonością (inf).
     EXPECT_TRUE(std::isinf(result.get_attrib(RESULT_AREA)));
 }
 
 // 3. DANE NIEPOPRAWNE / 4. LOGIKA GEOMETRYCZNA: Ujemny promień
-TEST(CircleTest, InvalidData_NegativeRadiusThrowsException) {
+TEST(CircleTest, InvalidData_NegativeRadiusThrowsException)
+{
     ShapeParam<double> param;
     param.set_attrib(PARAM_RADIUS, -5.0);
-    
+
     Circle<double> circle(param);
 
     // Oczekujemy rzucenia wyjątku invalid_argument z powodu ujemnego promienia
