@@ -89,4 +89,5 @@ TEST(test_trapeze, PerformanceUnder1ms)
 
     // 1 ms = 1000 microseconds
     ASSERT_LT(duration.count(), 1000);
+
 }
