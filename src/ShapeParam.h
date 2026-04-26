@@ -45,7 +45,6 @@ template <class T> inline bool ShapeParam<T>::validate() const
             T R = get_attrib(PARAM_RADIUS);
             T r = get_attrib(PARAM_RADIUS_2);
 
-
             return (R > r) && (r > static_cast<T>(0));
         }
 
