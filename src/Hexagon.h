@@ -21,10 +21,10 @@ public:
 template <class T> inline ShapeResult<T> Hexagon<T>::compute()
 {
     ShapeResult<T> result;
-    // Zak³adamy, ¿e u¿ywamy szerokoœci (width) jako boku szeœciok¹ta
+
     T side = this->m_param.get_attrib(PARAM_WIDTH);
 
-    // Wzór na pole szeœciok¹ta foremnego: (3 * sqrt(3) / 2) * a^2
+
     T area = static_cast<T>((3.0 * sqrt(3.0) / 2.0) * side * side);
     T perimeter = static_cast<T>(6.0 * side);
 
