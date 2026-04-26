@@ -1,5 +1,6 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
+#include <chrono>
 #include <gtest/gtest.h>
 #include "ShapeFactory.h"
 #include <stdexcept>
@@ -117,4 +118,32 @@ TEST(test_torus, PrintContainsValues)
     ASSERT_NE(text.find("Torus"), std::string::npos);
     ASSERT_NE(text.find("5"), std::string::npos);
     ASSERT_NE(text.find("2"), std::string::npos);
+}
+
+
+TEST(PerformanceTest, TorusCompute100Iterations)
+{
+    const int iterations = 100;
+
+    ShapeParam<double> param;
+    param.set_attrib(PARAM_RADIUS, 5.0);
+    param.set_attrib(PARAM_RADIUS_2, 2.0);
+
+    Torus<double> torus(param);
+
+    double sink = 0;
+
+    auto start = chrono::high_resolution_clock::now();
+
+    for (int i = 0; i < iterations; ++i)
+    {
+        auto res = torus.compute();
+        sink += res.get_attrib(RESULT_VOLUME);
+    }
+
+    auto end = chrono::high_resolution_clock::now();
+
+    auto duration = chrono::duration<double, micro>(end - start);
+
+    EXPECT_LT(duration.count(), 200.0);
 }
