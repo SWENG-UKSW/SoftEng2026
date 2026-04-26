@@ -36,9 +36,27 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
-template<class T>
-inline bool ShapeParam<T>::validate() const {
-  return true;
+template <class T> inline bool ShapeParam<T>::validate() const
+{
+
+    if (attribs.empty())
+    {
+        return false;
+    }
+
+
+    switch (type)
+    {
+        case ShapeType::PT_RECT: {
+            T width = get_attrib(PARAM_WIDTH);
+            T height = get_attrib(PARAM_HEIGHT);
+            return width > 0 && height > 0;
+        }
+
+
+        default: return true;
+    }
+    return true;
 }
 
 #endif
