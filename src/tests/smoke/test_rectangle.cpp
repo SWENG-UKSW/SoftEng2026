@@ -16,9 +16,9 @@ TYPED_TEST(RectangleTypedTest, ComputeCorrectValues)
 
     param.set_attrib(PARAM_WIDTH, static_cast<TypeParam>(4));
     param.set_attrib(PARAM_HEIGHT, static_cast<TypeParam>(3));
-
+    param.type = ShapeType::PT_RECT;
     Rectangle<TypeParam> rect(param);
-
+    ASSERT_TRUE(param.validate());
     ShapeResult<TypeParam> result = rect.compute();
 
     ASSERT_EQ(result.get_attrib(RESULT_AREA), static_cast<TypeParam>(12));
