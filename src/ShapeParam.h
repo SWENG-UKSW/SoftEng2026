@@ -38,7 +38,6 @@ template <class T> inline bool ShapeParam<T>::validate() const
 {
     if (attribs.empty()) return false;
 
-
     switch (type)
     {
         case ShapeType::PT_TORUS: {
