@@ -7,17 +7,23 @@
 
 #include <sstream>
 #include <string>
+#include <stdexcept>
 
 template <class T> class Circle : public Shape2D<T> {
 public:
-    inline ShapeResult<T> compute();
-    inline std::string print();
+    inline virtual ShapeResult<T> compute();
+    inline virtual std::string print();
     inline Circle(const ShapeParam<T>& param);
 };
 
 template <class T> inline ShapeResult<T> Circle<T>::compute()
 {
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
+    if (radius < 0)
+    {
+        throw std::invalid_argument("Blad: Promien kola nie moze byc ujemny.");
+    }
+
     const double PI = 3.14159265358979323846;
 
     // Obliczenia na typie double dla precyzji
