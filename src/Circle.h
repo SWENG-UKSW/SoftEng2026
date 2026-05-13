@@ -7,25 +7,32 @@
 
 #include <sstream>
 #include <string>
+#include <stdexcept>
 
 template <class T> class Circle : public Shape2D<T> {
 public:
-    inline ShapeResult<T> compute();
-    inline std::string print();
-    inline Circle(const ShapeParam<T>& param);
+    Circle(const ShapeParam<T>& param);
+    ShapeResult<T> compute();
+    std::string print();
 };
+
+template <class T>
+inline Circle<T>::Circle(const ShapeParam<T>& param): Shape2D<T>(param)
+{}
 
 template <class T> inline ShapeResult<T> Circle<T>::compute()
 {
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
+
+    if (radius < static_cast<T>(0))
+        throw std::invalid_argument("Radius cannot be negative");
+
     const double PI = 3.14159265358979323846;
 
-    // Obliczenia na typie double dla precyzji
     double area =
         PI * static_cast<double>(radius) * static_cast<double>(radius);
     double perimeter = 2.0 * PI * static_cast<double>(radius);
 
-    // Pakowanie wynikow do obiektu ShapeResultData
     ShapeResult<T> result;
     result.set_attrib(RESULT_AREA, static_cast<T>(area));
     result.set_attrib(RESULT_PERIMETER, static_cast<T>(perimeter));
@@ -38,7 +45,6 @@ template <class T> inline std::string Circle<T>::print()
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
     ShapeResult<T> result = compute();
 
-    // Uzycie ostringstream do zbudowania wieloliniowego tekstu
     std::ostringstream out;
     out << "=== FIGURA: KOLO ===" << std::endl;
     out << "Promien: " << radius << std::endl;
@@ -49,8 +55,4 @@ template <class T> inline std::string Circle<T>::print()
     return out.str();
 }
 
-template <class T>
-inline Circle<T>::Circle(const ShapeParam<T>& param): Shape2D<T>(param)
-{}
-
-#endif // CIRCLE_H_
+#endif

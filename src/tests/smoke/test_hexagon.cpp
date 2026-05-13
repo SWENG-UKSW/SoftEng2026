@@ -54,3 +54,18 @@ TEST(test_hexagon, HexagonZero)
     ASSERT_EQ(area, 0.f);
     ASSERT_EQ(perimeter, 0.f);
 }
+
+TEST(test_hexagon, HexagonNegative)
+{
+    ShapeParam<float> param;
+
+    bool res = param.set_attrib(ShapeParamIndex::PARAM_RADIUS, -5.f);
+
+    ASSERT_NE(res, false);
+
+    param.type = ShapeType::PT_HEXAGON;
+
+    res = param.validate();
+
+    ASSERT_EQ(res, false);
+}

@@ -36,9 +36,25 @@ inline bool ShapeParam<T>::set_attrib(ShapeParamIndex ind, const T & val) {
   return true;
 }
 
-template<class T>
-inline bool ShapeParam<T>::validate() const {
-  return true;
+template <class T> inline bool ShapeParam<T>::validate() const
+{
+    switch (type)
+    {
+        case ShapeType::PT_HEXAGON: {
+            T radius = get_attrib(PARAM_RADIUS);
+
+            if (radius < 0)
+            {
+                return false;
+            }
+
+            break;
+        }
+
+        default: break;
+    }
+
+    return true;
 }
 
 #endif

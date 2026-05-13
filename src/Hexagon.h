@@ -6,6 +6,7 @@
 #include "ShapeResultData.h"
 #include "ShapeResultIndex.h"
 #include <string>
+#include <stdexcept>
 using namespace std;
 #include "ShapeParam.h"
 #include "ShapeParamIndex.h"
@@ -19,11 +20,19 @@ public:
 
 template <class T> inline ShapeResult<T> Hexagon<T>::compute()
 {
-
     ShapeResult<T> result;
+
     T a = this->m_param.get_attrib(PARAM_RADIUS);
+
+    // Walidacja matematyczna
+    if (a < 0)
+    {
+        throw invalid_argument("Hexagon side length cannot be negative");
+    }
+
     T area = (3 * sqrt(3) * a * a) / 2;
     T perimeter = 6 * a;
+
     result.set_attrib(RESULT_AREA, area);
     result.set_attrib(RESULT_PERIMETER, perimeter);
 
@@ -33,6 +42,7 @@ template <class T> inline ShapeResult<T> Hexagon<T>::compute()
 template <class T> inline string Hexagon<T>::print()
 {
     ShapeResult<T> result = compute();
+
     T area = result.get_attrib(RESULT_AREA);
     T perimeter = result.get_attrib(RESULT_PERIMETER);
 
