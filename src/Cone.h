@@ -1,16 +1,18 @@
 #ifndef _CONE_H
 #define _CONE_H
 
-#include <cmath>
-#include <string>
-#include <stdexcept>
 #include "Shape3D.h"
 #include "ShapeResultData.h"
+#include <string>
+#include <cmath>
 #include "ShapeParam.h"
-#include "ShapeResultIndex.h"
 #include "ShapeParamIndex.h"
 
 using namespace std;
+
+template <class T> class Cone : public Shape3D<T> {
+public:
+    inline virtual ShapeResult<T> compute();
 
 template <class T> class Cone : public Shape3D<T> {
 public:
@@ -21,45 +23,29 @@ public:
 
 template <class T> inline ShapeResult<T> Cone<T>::compute()
 {
-    ShapeResult<T> result;
+    ShapeResult<T> res;
 
-    // Pobieramy promieñ i wysokoœæ
-    T radius = this->m_param.get_attrib(PARAM_RADIUS);
-    T height = this->m_param.get_attrib(PARAM_HEIGHT);
+    T r = this->m_param.get_attrib(PARAM_RADIUS);
+    T h = this->m_param.get_attrib(PARAM_HEIGHT);
+    T pi = static_cast<T>(3.141592653589793);
 
-    // Zabezpieczenie przed ujemnymi wartoœciami
-    if (radius < 0 || height < 0)
-    {
-        throw std::invalid_argument("Radius and height cannot be negative");
-    }
+    // TworzÄ…ca stoÅ¼ka l = sqrt(r^2 + h^2)
+    T l = sqrt(r * r + h * h);
 
-    // Obliczanie tworz¹cej sto¿ka: l = sqrt(r^2 + h^2)
-    T slant_height = static_cast<T>(sqrt(radius * radius + height * height));
+    T volume = (static_cast<T>(1.0) / 3.0) * pi * r * r * h;
+    T surfaceArea = pi * r * (r + l);
 
-    // Pole powierzchni ca³kowitej = Pi * r * (r + l)
-    T area = static_cast<T>(3.14159265358979323846 * radius
-                            * (radius + slant_height));
+    res.set_attrib(RESULT_VOLUME, volume);
+    res.set_attrib(RESULT_SURFACE, surfaceArea);
 
-    // Objêtoœæ = 1/3 * Pi * r^2 * h
-    T volume = static_cast<T>((1.0 / 3.0) * 3.14159265358979323846 * radius
-                              * radius * height);
-
-    result.set_attrib(RESULT_AREA, area);
-    result.set_attrib(RESULT_VOLUME, volume);
-
-    return result;
+    return res;
 }
 
 template <class T> inline string Cone<T>::print()
 {
-    ShapeResult<T> result = compute();
-    T area = result.get_attrib(RESULT_AREA);
-    T volume = result.get_attrib(RESULT_VOLUME);
-    T radius = this->m_param.get_attrib(PARAM_RADIUS);
-    T height = this->m_param.get_attrib(PARAM_HEIGHT);
-
-    return "Cone (radius=" + to_string(radius) + ", height=" + to_string(height)
-        + ") | area: " + to_string(area) + ", volume: " + to_string(volume);
+    return "Cone (StoÅ¼ek) - R: "
+        + to_string(this->m_param.get_attrib(PARAM_RADIUS))
+        + ", H: " + to_string(this->m_param.get_attrib(PARAM_HEIGHT));
 }
 
 template <class T>
@@ -67,4 +53,3 @@ inline Cone<T>::Cone(const ShapeParam<T>& param): Shape3D<T>(param)
 {}
 
 #endif
-

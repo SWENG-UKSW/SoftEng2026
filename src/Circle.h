@@ -1,60 +1,56 @@
-#ifndef _CIRCLE_H
-#define _CIRCLE_H
+#ifndef CIRCLE_H_
+#define CIRCLE_H_
 
-#include <cmath>
-#include <string>
-#include <stdexcept>
 #include "Shape2D.h"
-#include "ShapeResultData.h"
 #include "ShapeParam.h"
-#include "ShapeResultIndex.h"
-#include "ShapeParamIndex.h"
+#include "ShapeResultData.h"
 
-using namespace std;
+#include <sstream>
+#include <string>
 
 template <class T> class Circle : public Shape2D<T> {
 public:
     inline ShapeResult<T> compute();
-    inline string print();
+    inline std::string print();
     inline Circle(const ShapeParam<T>& param);
 };
 
 template <class T> inline ShapeResult<T> Circle<T>::compute()
 {
-    ShapeResult<T> result;
-
-    // Pobieramy promieñ z parametrów (zak³adam, ¿e w indeksach to PARAM_RADIUS)
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
+    const double PI = 3.14159265358979323846;
 
-    // ETAP 2: Zabezpieczenie przed ujemnym promieniem
-    if (radius < 0)
-    {
-        throw std::invalid_argument("Radius cannot be negative");
-    }
+    // Obliczenia na typie double dla precyzji
+    double area =
+        PI * static_cast<double>(radius) * static_cast<double>(radius);
+    double perimeter = 2.0 * PI * static_cast<double>(radius);
 
-    // Obliczanie pola (Pi * r^2) i obwodu (2 * Pi * r)
-    T area = static_cast<T>(3.14159265358979323846 * radius * radius);
-    T perimeter = static_cast<T>(2.0 * 3.14159265358979323846 * radius);
-
-    result.set_attrib(RESULT_AREA, area);
-    result.set_attrib(RESULT_PERIMETER, perimeter);
+    // Pakowanie wynikow do obiektu ShapeResultData
+    ShapeResult<T> result;
+    result.set_attrib(RESULT_AREA, static_cast<T>(area));
+    result.set_attrib(RESULT_PERIMETER, static_cast<T>(perimeter));
 
     return result;
 }
 
-template <class T> inline string Circle<T>::print()
+template <class T> inline std::string Circle<T>::print()
 {
-    ShapeResult<T> result = compute();
-    T area = result.get_attrib(RESULT_AREA);
-    T perimeter = result.get_attrib(RESULT_PERIMETER);
     T radius = this->m_param.get_attrib(PARAM_RADIUS);
+    ShapeResult<T> result = compute();
 
-    return "Circle (radius=" + to_string(radius) + ") | area: "
-        + to_string(area) + ", perimeter: " + to_string(perimeter);
+    // Uzycie ostringstream do zbudowania wieloliniowego tekstu
+    std::ostringstream out;
+    out << "=== FIGURA: KOLO ===" << std::endl;
+    out << "Promien: " << radius << std::endl;
+    out << "Pole powierzchni: " << result.get_attrib(RESULT_AREA) << std::endl;
+    out << "Obwod: " << result.get_attrib(RESULT_PERIMETER) << std::endl;
+    out << "====================";
+
+    return out.str();
 }
 
 template <class T>
 inline Circle<T>::Circle(const ShapeParam<T>& param): Shape2D<T>(param)
 {}
 
-#endif
+#endif // CIRCLE_H_
