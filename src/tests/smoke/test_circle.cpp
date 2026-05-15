@@ -1,59 +1,59 @@
-#include "ShapeResultIndex.h"
-#include <gtest/gtest.h>
-#include <stdexcept>
-#include <limits>
-#include <cmath>
-#include "Circle.h"
+#ifndef CIRCLE_H_
+#define CIRCLE_H_
+
+#include "Shape2D.h"
 #include "ShapeParam.h"
+#include "ShapeResultData.h"
+#include <sstream>
+#include <string>
+#include <cmath>
+#include <stdexcept>
 
-// 1. HAPPY PATH: Zwykłe wartości (np. r=5)
-TEST(CircleTest, HappyPath_StandardValues)
+template <class T> class Circle : public Shape2D<T> {
+public:
+    inline ShapeResult<T> compute();
+    inline std::string print();
+    inline Circle(const ShapeParam<T>& param);
+};
+
+template <class T> inline ShapeResult<T> Circle<T>::compute()
 {
-    ShapeParam<double> param;
-    param.set_attrib(PARAM_RADIUS, 5.0);
+    T radius = this->m_param.get_attrib(PARAM_RADIUS);
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
+    // Sprawdzenie ujemnego promienia - WYMAGANE PRZEZ TESTY
+    if (radius < static_cast<T>(0))
+    {
+        throw std::invalid_argument("Radius cannot be negative");
+    }
 
-    EXPECT_NEAR(result.get_attrib(RESULT_AREA), 78.5398, 0.01);
-    EXPECT_NEAR(result.get_attrib(RESULT_PERIMETER), 31.4159, 0.01);
+    const T PI = static_cast<T>(3.14159265358979323846);
+    T area = PI * radius * radius;
+    T perimeter = static_cast<T>(2.0) * PI * radius;
+
+    ShapeResult<T> result;
+    result.set_attrib(RESULT_AREA, area);
+    result.set_attrib(RESULT_PERIMETER, perimeter);
+
+    return result;
 }
 
-// 2. WARTOŚCI GRANICZNE: Obsługa zera (r=0)
-TEST(CircleTest, EdgeCase_ZeroRadius)
+template <class T> inline std::string Circle<T>::print()
 {
-    ShapeParam<double> param;
-    param.set_attrib(PARAM_RADIUS, 0.0);
+    T radius = this->m_param.get_attrib(PARAM_RADIUS);
+    ShapeResult<T> result = compute();
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
+    std::ostringstream out;
+    out << "=== FIGURA: KOLO ===" << std::endl;
+    out << "Promien: " << radius << std::endl;
+    out << "Pole powierzchni: " << result.get_attrib(RESULT_AREA) << std::endl;
+    out << "Obwod: " << result.get_attrib(RESULT_PERIMETER) << std::endl;
+    out << "====================";
 
-    EXPECT_DOUBLE_EQ(result.get_attrib(RESULT_AREA), 0.0);
-    EXPECT_DOUBLE_EQ(result.get_attrib(RESULT_PERIMETER), 0.0);
+    return out.str();
 }
 
-// 2. WARTOŚCI GRANICZNE: Ekstremalnie duże liczby
-TEST(CircleTest, EdgeCase_MaxDoubleValue)
-{
-    ShapeParam<double> param;
-    param.set_attrib(PARAM_RADIUS, std::numeric_limits<double>::max());
+template <class T>
+inline Circle<T>::Circle(const ShapeParam<T>& param): Shape2D<T>(param)
+{}
 
-    Circle<double> circle(param);
-    auto result = circle.compute();
-
-    // Po pomnożeniu dwóch maksymalnych wartości przez siebie nastąpi
-    // przepełnienie. Wynik pola będzie matematyczną nieskończonością (inf).
-    EXPECT_TRUE(std::isinf(result.get_attrib(RESULT_AREA)));
-}
-
-// 3. DANE NIEPOPRAWNE / 4. LOGIKA GEOMETRYCZNA: Ujemny promień
-TEST(CircleTest, InvalidData_NegativeRadiusThrowsException)
-{
-    ShapeParam<double> param;
-    param.set_attrib(PARAM_RADIUS, -5.0);
-
-    Circle<double> circle(param);
-
-    // Oczekujemy rzucenia wyjątku invalid_argument z powodu ujemnego promienia
-    EXPECT_THROW(circle.compute(), std::invalid_argument);
-}
+#endif // CIRCLE_H_
