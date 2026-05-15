@@ -14,6 +14,9 @@ template <class T> class Cone : public Shape3D<T> {
 public:
     inline virtual ShapeResult<T> compute();
 
+template <class T> class Cone : public Shape3D<T> {
+public:
+    inline virtual ShapeResult<T> compute();
     inline string print();
     inline Cone(const ShapeParam<T>& param);
 };

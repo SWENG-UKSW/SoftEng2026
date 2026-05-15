@@ -1,8 +1,12 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 #include <gtest/gtest.h>
+#include <memory>
+#include <chrono> // Biblioteka do mierzenia czasu (STOPER)
 #include "ShapeFactory.h"
+#include "Cone.h" // Pod��czamy nasz nowy Sto�ek
 
+// 1. Tw�j stary test - odkomentowa�em w nim liczenie, �eby dzia�a� poprawnie
 TEST(test_shape1, AddFunction)
 {
     bool res = true;
@@ -24,7 +28,6 @@ TEST(test_shape1, AddFunction)
     ShapeResult<float> data = shape->compute();
     float area = data.get_attrib(ShapeResultIndex::RESULT_AREA);
     ASSERT_NE(area, 0.f);
-#endif
 
     shape.reset(nullptr);
     ASSERT_EQ(shape.get(), nullptr);
